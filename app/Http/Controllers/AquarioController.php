@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
+use Illuminate\Database\QueryException;
 
 class AquarioController extends Controller
 {
@@ -39,18 +40,17 @@ class AquarioController extends Controller
     public function store(Request $request)
     {
         $aquario = new Aquario([
-          'data_montagem'    => $request->get('data_montagem'),
-          'largura'          => $request->get('largura'),
-          'comprimento'      => $request->get('comprimento'),
-          'altura'           => $request->get('altura'),
-          'descricao'        => $request->get('descricao'),
-          'valor'            => $request->get('valor'),
-          'data_desmontagem' => $request->get('data_desmontagem')
+            'data_montagem'    => $request->get('data_montagem'),
+            'largura'          => $request->get('largura'),
+            'comprimento'      => $request->get('comprimento'),
+            'altura'           => $request->get('altura'),
+            'descricao'        => $request->get('descricao'),
+            'valor'            => $request->get('valor'),
+            'data_desmontagem' => $request->get('data_desmontagem')
         ]);
 
         $aquario->save();
-
-        return redirect('/aquario')->with('success', 'TESTE');
+        return redirect('/aquario');
     }
 
     /**
@@ -85,19 +85,25 @@ class AquarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $aquario = Aquario::find($id);
-        $aquario->data_montagem    = $request->get('data_montagem');
-        $aquario->largura          = $request->get('largura');
-        $aquario->comprimento      = $request->get('comprimento');
-        $aquario->altura           = $request->get('altura');
-        $aquario->descricao        = $request->get('descricao');
-        $aquario->valor            = $request->get('valor');
-        $aquario->data_desmontagem = $request->get('data_desmontagem');
-        $aquario->save();
 
-        return redirect('/aquario')->with('message', 'TESTE');
+    public function home() {
+        return view('aquario.home');
+    }
+
+    public function update(Request $req)
+    {
+        $aquario = Aquario::find ($req->id);
+
+        $aquario->data_montagem = $req->data_montagem;
+        $aquario->largura = $req->largura;
+        $aquario->altura = $req->altura;
+        $aquario->comprimento = $req->comprimento;
+        $aquario->descricao = $req->descricao;
+        $aquario->valor = $req->valor;
+        $aquario->data_desmontagem = $req->data_desmontagem;
+
+        $aquario->save();
+        return response()->json($aquario); 
     }
 
     /**

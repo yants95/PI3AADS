@@ -19,15 +19,14 @@ Route::post('/adicionar-aquario', 'AquarioController@store')->name('add.aquario'
 
 Route::resource('aquario', 'AquarioController')->middleware('auth');
 
-Route::group(['middleware' => 'auth'], function () {;
-    Route::get('aquario', 'AquarioController@index');
-    Route::get('aquario/inserir', 'AquarioController@create');
-    Route::post('aquario/inserir', 'AquarioController@store');
-    Route::get('aquario/edit/{id}', 'AquarioController@edit');
-    Route::post('aquario/edit/{id}', 'AquarioController@update');
-    Route::post('aquario/deletar/{id}', 'AquarioController@destroy');
+$this->group(['middleware' => 'auth'], function () {
+	$this->get('/home', 'AquarioController@home')->name('home');
+    $this->get('/aquario', 'AquarioController@index');
+    $this->get('/aquario/inserir', 'AquarioController@create')->name('create.aquario');
+    $this->post('/aquario/inserir', 'AquarioController@store')->name('add.aquario');
+    $this->get('/aquario/edit/{id}', 'AquarioController@edit')->name('show.aquario');
+    $this->post('/aquario/edit', 'AquarioController@update')->name('update.aquario');
+    $this->post('/aquario/deletar/{id}', 'AquarioController@destroy');
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
