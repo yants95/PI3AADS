@@ -1,4 +1,5 @@
 $(document).on('click', '.edit-modal', function() {
+    $('#id').val($(this).data('id'));
     $('#data_montagem').val($(this).data('montagem'));
     $('#largura').val($(this).data('largura'));
     $('#altura').val($(this).data('altura'));

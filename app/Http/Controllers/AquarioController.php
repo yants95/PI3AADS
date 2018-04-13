@@ -8,7 +8,6 @@ use Illuminate\Database\QueryException;
 
 class AquarioController extends Controller
 {
-  
     /**
      * Display a listing of the resource.
      *

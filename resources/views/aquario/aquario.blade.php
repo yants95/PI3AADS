@@ -16,7 +16,7 @@
 @section('content')
     <div class="box">
         <div class="box-header">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Adicionar Aquarios</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Adicionar aquários</button>
         </div>
         <div class="box-body">
 
@@ -52,7 +52,7 @@
                                                                data-comprimento="{{$row->comprimento}}"
                                                                data-valor="{{$row->valor}}" 
                                                                data-desmontagem="{{$row->data_desmontagem}}">
-                        <span class="glyphicon glyphicon-edit"></span> Edit
+                        <span class="glyphicon glyphicon-edit"></span> Editar
                     </button>
                 </td>
                 </tr>
