@@ -17,7 +17,7 @@ class AquarioController extends Controller
     {
         $aquario = Aquario::paginate(5);
 
-        return view('aquario.aquario', compact('aquario'));
+        return view('aquario.index', compact('aquario'));
     }
 
     /**
@@ -49,6 +49,7 @@ class AquarioController extends Controller
         ]);
 
         $aquario->save();
+
         return redirect('/aquario');
     }
 

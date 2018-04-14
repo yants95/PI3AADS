@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::post('/adicionar-aquario', 'AquarioController@store')->name('add.aquario')->middleware('auth');;
