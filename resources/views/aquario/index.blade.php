@@ -57,8 +57,8 @@
                         <span class="glyphicon glyphicon-edit"></span> Editar
                     </button>
 
-                    <button class="details-modal btn btn-info" 
-                                                               data-montagem="{{$row->data_montagem}}"
+                    <button class="details-modal btn btn-info" data-id="{{$row->id}}"
+                                                               data-dt_montagem="{{$row->data_montagem}}"
                                                                data-descricao="{{$row->descricao}}"
                                                                data-altura="{{$row->altura}}"
                                                                data-largura="{{$row->largura}}"

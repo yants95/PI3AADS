@@ -110,27 +110,27 @@ return [
     'menu' => [        
         [
             'text'        => 'Geral',
-            'url'         => '',
+            'url'         => 'home',
             'icon'        => '',
         ],
         [
             'text'        => 'Gráficos',
-            'url'         => '',
+            'url'         => '#',
             'icon'        => '',
         ],
         [
             'text'        => 'Parâmetros do aquário',
-            'url'         => '',
+            'url'         => '#',
             'icon'        => '',
         ],
         [
             'text'        => 'Tomadas',
-            'url'         => '',
+            'url'         => '#',
             'icon'        => '',
         ],
         [
             'text'        => 'Iluminação',
-            'url'         => '',
+            'url'         => '#',
             'icon'        => '',
         ],
         
