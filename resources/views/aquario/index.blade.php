@@ -1,40 +1,82 @@
-@extends('layout.layout')
+@extends('adminlte::page')
+
+@section('title', 'Aquários')
+
+@section('content_header')
+    <h1>Aquários</h1>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <script src="js/crud.js"></script>
+
+@stop
 
 @section('content')
-        @if (Session::has('message'))
-            <div class="alert alert-info">{{ Session::get('message') }}</div>
-        @endif
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Task Title</th>
-              <th scope="col">Task Description</th>
-              <th scope="col">Created At</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($tasks as $task)
-            <tr>
-              <th scope="row">{{$task->id}}</th>
-              <td><a href="/tasks/{{$task->id}}">{{$task->title}}</a></td>
-              <td>{{$task->description}}</td>
-              <td>{{$task->created_at->toFormattedDateString()}}</td>
-              <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                  <a href="{{ URL::to('tasks/' . $task->id . '/edit') }}">
-                  	<button type="button" class="btn btn-warning">Edit</button>
-                  </a>&nbsp;
-                  <form action="{{url('tasks', [$task->id])}}" method="POST">
-    					<input type="hidden" name="_method" value="DELETE">
-   						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-   						<input type="submit" class="btn btn-danger" value="Delete"/>
-   				  </form>
-              </div>
-			</td>
-            </tr>
+    <div class="box">
+        <div class="box-header">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createModal">Adicionar aquários</button>
+        </div>
+        <div class="box-body">
+
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Data de montagem</th>
+                        <th>Descrição</th>
+                        <th>Dimensão</th>
+                        <th>Ativo</th>
+                    </tr>
+                </thead>
+            <tbody>
+            @foreach($aquario as $row)
+                @php
+                  $dimensao = ($row->largura * $row->altura * $row->comprimento) / 1000;
+                @endphp
+                <tr>
+                    <td>{{ $row->data_montagem }}</td>
+                    <td>{{ $row->descricao }}</td>
+                    <td>{{ number_format($dimensao, 2, '.', '') }}</td>
+                    <td>
+                        @if ($row->data_desmontagem)
+                            Não
+                        @else
+                            Sim
+                        @endif
+                    </td>
+                    <td>
+                    <button class="edit-modal btn btn-primary" data-id="{{$row->id}}"
+                                                               data-montagem="{{$row->data_montagem}}"
+                                                               data-descricao="{{$row->descricao}}"
+                                                               data-altura="{{$row->altura}}"
+                                                               data-largura="{{$row->largura}}"
+                                                               data-comprimento="{{$row->comprimento}}"
+                                                               data-valor="{{$row->valor}}" 
+                                                               data-desmontagem="{{$row->data_desmontagem}}">
+                        <span class="glyphicon glyphicon-edit"></span> Editar
+                    </button>
+
+                    <button class="details-modal btn btn-info" 
+                                                               data-montagem="{{$row->data_montagem}}"
+                                                               data-descricao="{{$row->descricao}}"
+                                                               data-altura="{{$row->altura}}"
+                                                               data-largura="{{$row->largura}}"
+                                                               data-comprimento="{{$row->comprimento}}"
+                                                               data-valor="{{$row->valor}}" 
+                                                               data-desmontagem="{{$row->data_desmontagem}}">
+                        <span class="glyphicon glyphicon-th-list"></span> Detalhes
+                    </button>
+                </td>
+                </tr>
             @endforeach
-          </tbody>
-        </table>
-@endsection
+            </tbody>
+            </table>
+            {!! $aquario->render() !!}
+        </div>
+    </div>
+
+        @include('aquario.edit')
+        @include('aquario.create')
+        @include('aquario.details')
+@stop
