@@ -115,7 +115,7 @@ return [
         ],
         [
             'text'        => 'Gráficos',
-            'url'         => '#',
+            'url'         => '/aquario/grafico',
             'icon'        => '',
         ],
         [

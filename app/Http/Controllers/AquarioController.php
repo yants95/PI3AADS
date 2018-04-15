@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
-use Illuminate\Database\QueryException;
 
 class AquarioController extends Controller
 {
@@ -27,7 +26,7 @@ class AquarioController extends Controller
      */
     public function create()
     {
-        return view('aquario.create');
+        //
     }
 
     /**
@@ -114,9 +113,6 @@ class AquarioController extends Controller
      */
     public function destroy($id)
     {
-      $aquario = Aquario::find($id);
-      $aquario->delete();
-
-      return redirect('/aquario');
+        //
     }
 }

@@ -12,15 +12,6 @@ $(document).ready(function() {
 });
 
   $(document).on('click', '.details-modal', function() {
-<<<<<<< HEAD
-    $('#data_montagem').val($(this).data('montagem'));
-    $('#largura').val($(this).data('largura'));
-    $('#altura').val($(this).data('altura'));
-    $('#comprimento').val($(this).data('comprimento'));
-    $('#descricao').val($(this).data('descricao'));
-    $('#valor').val($(this).data('valor'));
-    $('#data_desmontagem').val($(this).data('desmontagem'));
-=======
     $("#dt_montagem").val($(this).data('dt_montagem'));
     $('#aq_largura').val($(this).data('largura'));
     $('#aq_altura').val($(this).data('altura'));
@@ -28,7 +19,6 @@ $(document).ready(function() {
     $('#aq_descricao').val($(this).data('descricao'));
     $('#aq_valor').val($(this).data('valor'));
     $('#dt_desmontagem').val($(this).data('desmontagem'));
->>>>>>> dev
     $('#detailsModal').modal('show');
 });
 
