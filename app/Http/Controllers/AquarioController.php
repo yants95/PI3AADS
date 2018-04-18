@@ -110,13 +110,13 @@ class AquarioController extends Controller
     {
         $aquario = Aquario::find ($req->id);
 
-        $aquario->data_montagem = $req->data_montagem;
-        $aquario->largura = $req->largura;
-        $aquario->altura = $req->altura;
-        $aquario->comprimento = $req->comprimento;
-        $aquario->descricao = $req->descricao;
-        $aquario->valor = $req->valor;
-        $aquario->data_desmontagem = $req->data_desmontagem;
+        $aquario->data_montagem     = $req->data_montagem;
+        $aquario->largura           = $req->largura;
+        $aquario->altura            = $req->altura;
+        $aquario->comprimento       = $req->comprimento;
+        $aquario->descricao         = $req->descricao;
+        $aquario->valor             = $req->valor;
+        $aquario->data_desmontagem  = $req->data_desmontagem;
 
         $aquario->save();
         return response()->json($aquario); 
