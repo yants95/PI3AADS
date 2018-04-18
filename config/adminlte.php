@@ -120,7 +120,7 @@ return [
         ],
         [
             'text'        => 'Parâmetros do aquário',
-            'url'         => '/aquario/criar/parametros',
+            'url'         => '/aquario/parametros',
             'icon'        => '',
         ],
         [
