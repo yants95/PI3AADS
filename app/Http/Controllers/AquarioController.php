@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
-use Illuminate\Database\QueryException;
+use App\Parametros;
+use GuzzleHtpp\Client;
 
 class AquarioController extends Controller
 {
@@ -13,6 +14,19 @@ class AquarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function importados() {
+        $client = new Client([
+            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
+        ]);
+
+        $response = $client->request('GET');
+
+        $importados = json_decode($response->getBody()->getContents());
+
+        return $importados;
+    }
+
     public function index()
     {
         $aquario = Aquario::paginate(5);
@@ -27,7 +41,7 @@ class AquarioController extends Controller
      */
     public function create()
     {
-        return view('aquario.create');
+        //
     }
 
     /**
@@ -114,9 +128,6 @@ class AquarioController extends Controller
      */
     public function destroy($id)
     {
-      $aquario = Aquario::find($id);
-      $aquario->delete();
-
-      return redirect('/aquario');
+        //
     }
 }
