@@ -9,7 +9,7 @@
 
             <div class="modal-body">         
 
-                <form class="form-horizontal" action="" method="POST">
+                <form class="form-horizontal">
                     {!! csrf_field() !!}                    
 
                     <div class="col-md-12">
@@ -37,8 +37,7 @@
 
                         <div class="col-sm-4">
                             <label for="magnesio">Magnésio</label>
-                            <input type="text" id="magnesio" name="magnesio" id="magnesio" placeholder="Magnésio" class="form-control" 
-                                placeholder="Descrição" >
+                            <input type="text" id="magnesio" name="magnesio" id="magnesio" placeholder="Magnésio" class="form-control" placeholder="Descrição" >
                         </div>
 
                          <div class="col-sm-4">
@@ -76,10 +75,12 @@
                         </div>     
                     </div>
 
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Adicionar</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                        </div>
+                    <input type="hidden" name="id" id="id" value="" />
+
+                    <div class="modal-footer">
+                        <button type="submit" class="edit btn btn-primary">Atualizar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
                 </form>
             </div>
         </div>
