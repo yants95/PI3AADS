@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 class ParametrosController extends Controller
 {
 
+    public function index() {
+        $params = Parametros::paginate(5);
+
+        return view('aquario.parameters', compact('params'));
+    }
+
 	public function create() {
 		$params = Parametros::all();
 
@@ -33,6 +39,26 @@ class ParametrosController extends Controller
 
         $params->save();
 
-        return redirect("/aquario/criar/parametros");
+        return redirect("/aquario/parametros");
+    }
+
+    public function update(Request $req)
+    {
+        $params = Parametros::find ($req->id);
+
+        $params->data               = $req->data;
+        $params->ph                 = $req->ph;
+        $params->salinidade         = $req->salinidade;
+        $params->calcio             = $req->calcio;
+        $params->magnesio           = $req->magnesio;
+        $params->reserva_alcalina   = $req->reserva_alcalina;
+        $params->amonia             = $req->amonia;
+        $params->nitrito            = $req->nitrito;
+        $params->nitrato            = $req->nitrato;
+        $params->fosfato            = $req->fosfato;
+        $params->silica             = $req->silica;
+
+        $params->save();
+        return response()->json($params); 
     }
 }
