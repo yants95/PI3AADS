@@ -27,8 +27,11 @@ $this->group(['middleware' => 'auth'], function () {
     $this->post('/aquario/edit', 'AquarioController@update');
 
 
-    $this->get('/aquario/criar/parametros', 'ParametrosController@create')->name('create.parametros');
-    $this->post('/aquario/criar/parametros', 'ParametrosController@store')->name('add.parametros');
+    $this->get('/aquario/criar/parametros', 'ParametrosController@index');
+    $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
+    $this->post('/aquario/parametros/edit', 'ParametrosController@update')->name('update.parameters');
+
+    $this->any('/aquario/buscar', 'AquarioController@pesquisa')->name('search.aquario');
 
     $this->get('/aquario/importados', 'AquarioController@importados');
     $this->get('/aquario/grafico', 'AquarioGraficoController@index')->name('aquario.grafico');
