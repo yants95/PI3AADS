@@ -12,13 +12,13 @@ $(document).ready(function() {
 });
 
   $(document).on('click', '.details-modal', function() {
-    $("#dt_montagem").val($(this).data('dt_montagem'));
-    $('#aq_largura').val($(this).data('largura'));
-    $('#aq_altura').val($(this).data('altura'));
-    $('#aq_comprimento').val($(this).data('comprimento'));
-    $('#aq_descricao').val($(this).data('descricao'));
-    $('#aq_valor').val($(this).data('valor'));
-    $('#dt_desmontagem').val($(this).data('desmontagem'));
+    $("#dt_montagem").text($(this).data('dt_montagem'));
+    $('#aq_largura').text($(this).data('largura'));
+    $('#aq_comprimento').text($(this).data('comprimento'));
+    $('#aq_altura').text($(this).data('altura'));
+    $('#aq_descricao').text($(this).data('descricao'));
+    $('#aq_valor').text($(this).data('valor'));
+    $('#dt_desmontagem').text($(this).data('desmontagem'));
     $('#detailsModal').modal('show');
 });
 
@@ -38,7 +38,7 @@ $('.modal-footer').on('click', '.edit', function() {
           'data_desmontagem': $('#data_desmontagem').val()
       },
       success: function(data) {
-          
+          window.location.href="/aquario";
       }
   });
 });
