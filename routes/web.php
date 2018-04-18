@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::post('/adicionar-aquario', 'AquarioController@store')->name('add.aquario')->middleware('auth');;
-
-Route::resource('aquario', 'AquarioController')->middleware('auth');
-
 $this->group(['middleware' => 'auth'], function () {
 	$this->get('/home', 'AquarioController@home')->name('home');
     $this->get('/aquario', 'AquarioController@index');
@@ -29,7 +25,7 @@ $this->group(['middleware' => 'auth'], function () {
 
     $this->get('/aquario/criar/parametros', 'ParametrosController@index');
     $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
-    $this->post('/aquario/parametros/edit', 'ParametrosController@update')->name('update.parameters');
+    $this->post('/aquario/parametros/edit', 'ParametrosController@update');
 
     $this->any('/aquario/buscar', 'AquarioController@pesquisa')->name('search.aquario');
 
