@@ -41,7 +41,7 @@
                   $dimensao = ($row->largura * $row->altura * $row->comprimento) / 1000;
                 @endphp
                 <tr>
-                    <td>{{ $row->data_montagem }}</td>
+                    <td>{{ date('d/m/Y', strtotime($row->data_montagem)) }}</td>
                     <td>{{ $row->descricao }}</td>
                     <td>{{ number_format($dimensao, 2, '.', '') }}</td>
                     <td>
