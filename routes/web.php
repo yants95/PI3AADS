@@ -24,9 +24,14 @@ $this->group(['middleware' => 'auth'], function () {
     $this->get('/aquario', 'AquarioController@index');
     $this->get('/aquario/inserir', 'AquarioController@create')->name('create.aquario');
     $this->post('/aquario/inserir', 'AquarioController@store')->name('add.aquario');
-    $this->get('/aquario/edit/{id}', 'AquarioController@edit')->name('show.aquario');
     $this->post('/aquario/edit', 'AquarioController@update');
-    $this->post('/aquario/deletar/{id}', 'AquarioController@destroy');
+
+
+    $this->get('/aquario/criar/parametros', 'ParametrosController@create')->name('create.parametros');
+    $this->post('/aquario/criar/parametros', 'ParametrosController@store')->name('add.parametros');
+
+    $this->get('/aquario/importados', 'AquarioController@importados');
+    $this->get('/aquario/grafico', 'AquarioGraficoController@index')->name('aquario.grafico');
 });
 
 Auth::routes();
