@@ -37,7 +37,7 @@
 
                         <div class="col-sm-4">
                             <label for="descricao">Descrição</label>
-                            <input type="text" id="descricao" name="descricao" class="form-control">
+                            <input type="text" id="descricao_edit" name="descricao" class="form-control">
                         </div>
 
                          <div class="col-sm-4">
