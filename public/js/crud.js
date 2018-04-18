@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('#largura').val($(this).data('largura'));
     $('#altura').val($(this).data('altura'));
     $('#comprimento').val($(this).data('comprimento'));
-    $('#descricao').val($(this).data('descricao'));
+    $('#descricao_edit').val($(this).data('descricao'));
     $('#valor').val($(this).data('valor'));
     $('#data_desmontagem').val($(this).data('desmontagem'));
     $('#editModal').modal('show');
@@ -33,7 +33,7 @@ $('.modal-footer').on('click', '.edit', function() {
           'largura': $('#largura').val(),
           'altura': $('#altura').val(),
           'comprimento': $('#comprimento').val(),
-          'descricao': $('#descricao').val(),
+          'descricao': $('#descricao_edit').val(),
           'valor': $('#valor').val(),
           'data_desmontagem': $('#data_desmontagem').val()
       },
