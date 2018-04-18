@@ -9,7 +9,7 @@
 
             <div class="modal-body">         
 
-                <form class="form-horizontal" action="{{ route('add.parametros') }}" method="POST">
+                <form class="form-horizontal" action="{{ route('add.parameters') }}" method="POST">
                     {!! csrf_field() !!}                    
 
                     <div class="col-md-12">
