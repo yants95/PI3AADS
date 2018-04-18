@@ -15,6 +15,12 @@
 @section('content')
     <div class="box">
         <div class="box-header">
+          <form action="{{ route('search.aquario') }}" method="POST" class="form form-inline">
+            {!! csrf_field() !!}
+            <input type="text" placeholder="Descrição" name="descricao" id="descricao" class="form-control">
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+          </form><br>
+
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#createModal">Adicionar aquários</button>
         </div>
         <div class="box-body">
@@ -72,7 +78,7 @@
             @endforeach
             </tbody>
             </table>
-            {!! $aquario->render() !!}
+            
         </div>
     </div>
 
