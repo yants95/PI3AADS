@@ -66,6 +66,7 @@
                                                                     data-nitrato="{{$param->nitrato}}"
                                                                     data-fosfato="{{$param->fosfato}}"
                                                                     data-silica="{{$param->silica}}"
+                                                                    data-aquario="{{$param->aquario->descricao}}"
                                                                     data-toggle="modal"
                                                                     data-target="#detailsParameters">
                         <span class="glyphicon glyphicon-th-list"></span> Detalhes
