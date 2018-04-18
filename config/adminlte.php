@@ -115,12 +115,12 @@ return [
         ],
         [
             'text'        => 'Gráficos',
-            'url'         => '#',
+            'url'         => '/aquario/grafico',
             'icon'        => '',
         ],
         [
             'text'        => 'Parâmetros do aquário',
-            'url'         => '#',
+            'url'         => '/aquario/criar/parametros',
             'icon'        => '',
         ],
         [
