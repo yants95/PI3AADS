@@ -23,7 +23,7 @@ $this->group(['middleware' => 'auth'], function () {
     $this->post('/aquario/edit', 'AquarioController@update');
 
 
-    $this->get('/aquario/criar/parametros', 'ParametrosController@index');
+    $this->get('/aquario/parametros', 'ParametrosController@index');
     $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
     $this->post('/aquario/parametros/edit', 'ParametrosController@update');
 
