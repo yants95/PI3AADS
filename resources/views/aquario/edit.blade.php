@@ -57,7 +57,7 @@
 
                     <div class="modal-footer">
                         <button type="submit" class="edit btn btn-primary">Atualizar</button>
-                        <button type="button" class="btn btn-" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                     </div>
                 </form>
             </div>
