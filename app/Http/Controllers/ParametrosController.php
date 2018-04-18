@@ -44,7 +44,7 @@ class ParametrosController extends Controller
 
     public function update(Request $req)
     {
-        $params = Parametros::find ($req->id);
+        $params = Parametros::find($req->id);
 
         $params->data               = $req->data;
         $params->ph                 = $req->ph;
