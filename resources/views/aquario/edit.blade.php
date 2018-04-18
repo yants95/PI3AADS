@@ -11,8 +11,6 @@
 
                 <form class="form-horizontal">
                     {!! csrf_field() !!}
-                    
-                    
 
                     <div class="col-md-12">
                         <div class="col-sm-4">
