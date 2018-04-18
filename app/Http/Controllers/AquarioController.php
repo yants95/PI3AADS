@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Aquario;
 use App\Parametros;
 use GuzzleHtpp\Client;
+use Input;
+use Illuminate\Support\Facades\DB;
 
 class AquarioController extends Controller
 {
@@ -129,5 +131,15 @@ class AquarioController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function pesquisa(Request $request) {
+        $descricao = $request->get('descricao');
+
+        $aquario = DB::table('aquarios')
+                        ->where('descricao','like','%'. $descricao . '%')
+                        ->get();
+
+        return view('aquario.index', compact('aquario'));
     }
 }
