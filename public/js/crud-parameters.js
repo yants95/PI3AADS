@@ -48,7 +48,7 @@ $('.modal-footer').on('click', '.edit', function() {
           'nitrito': $('#nitrito').val(),
           'nitrato': $('#nitrato').val(),
           'fosfato': $('#fosfato').val(),
-          'silica': $('#silica').val(),
+          'silica': $('#silica').val()
       },
       success: function(data) {
           window.location.href="/aquario/parametros";
