@@ -33,13 +33,14 @@
             <tbody>
             @foreach ($params as $param)
                 <tr>
-                    <td>{{ $param->data }}</td>
+                    <td>{{ date('d/m/Y', strtotime($param->data)) }}</td>
                     <td>{{ $param->ph }}</td>
                     <td>{{ $param->salinidade }}</td>
                     <td>{{ $param->nitrito }}</td>
                     <td>{{ $param->aquario->descricao }}</td>
                     <td>
-                    <button class="edit-modal btn btn-primary"      data-param="{{$param->data}}"
+                    <button class="edit-modal btn btn-primary"      data-id="{{$param->id}}"
+                                                                    data-param="{{$param->data}}"
                                                                     data-ph="{{$param->ph}}"
                                                                     data-salinidade="{{$param->salinidade}}"
                                                                     data-calcio="{{$param->calcio}}"
