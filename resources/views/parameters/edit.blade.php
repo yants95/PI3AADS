@@ -74,16 +74,6 @@
                             <label for="silica">Silica</label>
                             <input type="text" id="silica" name="silica" placeholder="Silica" id="silica" class="form-control">
                         </div>     
-    
-                        <div class="col-sm-4">
-                            <label for="aquario_relacionamento">Selecionar aquário</label>
-                            <select id="aquario_id" name="aquario_id" class="form-control">
-                                <option value="null">Selecione o aquário</option>
-                                    @foreach(App\Aquario::all() as $param)
-                                        <option value="{{ $param->id }}">{{ $param->descricao }}</option>
-                                    @endforeach
-                            </select>
-                        </div>
                     </div>
 
                         <div class="modal-footer">
