@@ -8,7 +8,7 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 
-    <script src="js/crud.js"></script>
+    {!! Charts::assets() !!}
 
 @stop
 
@@ -18,7 +18,7 @@
             
         </div>
         <div class="box-body">
-
+            {!! $chart->render() !!}
         </div>
     </div>
 
