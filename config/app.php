@@ -163,6 +163,11 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         ConsoleTVs\Charts\ChartsServiceProvider::class,
+<<<<<<< HEAD
+=======
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+>>>>>>> dev
     ],
 
     /*

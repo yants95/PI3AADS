@@ -11,8 +11,6 @@
 
                 <form class="form-horizontal">
                     {!! csrf_field() !!}
-                    
-                    
 
                     <div class="col-md-12">
                         <div class="col-sm-4">
@@ -39,7 +37,7 @@
 
                         <div class="col-sm-4">
                             <label for="descricao">Descrição</label>
-                            <input type="text" id="descricao" name="descricao" class="form-control">
+                            <input type="text" id="descricao_edit" name="descricao" class="form-control">
                         </div>
 
                          <div class="col-sm-4">
@@ -59,7 +57,7 @@
 
                     <div class="modal-footer">
                         <button type="submit" class="edit btn btn-primary">Atualizar</button>
-                        <button type="button" class="btn btn-" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                     </div>
                 </form>
             </div>

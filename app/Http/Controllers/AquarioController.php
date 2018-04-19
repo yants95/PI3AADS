@@ -4,6 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
+<<<<<<< HEAD
+=======
+use App\Parametros;
+use GuzzleHtpp\Client;
+use Input;
+use Illuminate\Support\Facades\DB;
+>>>>>>> dev
 
 class AquarioController extends Controller
 {
@@ -12,6 +19,19 @@ class AquarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function importados() {
+        $client = new Client([
+            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
+        ]);
+
+        $response = $client->request('GET');
+
+        $importados = json_decode($response->getBody()->getContents());
+
+        return $importados;
+    }
+
     public function index()
     {
         $aquario = Aquario::paginate(5);
@@ -93,13 +113,13 @@ class AquarioController extends Controller
     {
         $aquario = Aquario::find ($req->id);
 
-        $aquario->data_montagem = $req->data_montagem;
-        $aquario->largura = $req->largura;
-        $aquario->altura = $req->altura;
-        $aquario->comprimento = $req->comprimento;
-        $aquario->descricao = $req->descricao;
-        $aquario->valor = $req->valor;
-        $aquario->data_desmontagem = $req->data_desmontagem;
+        $aquario->data_montagem     = $req->data_montagem;
+        $aquario->largura           = $req->largura;
+        $aquario->altura            = $req->altura;
+        $aquario->comprimento       = $req->comprimento;
+        $aquario->descricao         = $req->descricao;
+        $aquario->valor             = $req->valor;
+        $aquario->data_desmontagem  = $req->data_desmontagem;
 
         $aquario->save();
         return response()->json($aquario); 
@@ -114,5 +134,18 @@ class AquarioController extends Controller
     public function destroy($id)
     {
         //
+<<<<<<< HEAD
+=======
+    }
+
+    public function pesquisa(Request $request) {
+        $descricao = $request->get('descricao');
+
+        $aquario = DB::table('aquarios')
+                        ->where('descricao','like','%'. $descricao . '%')
+                        ->get();
+
+        return view('aquario.index', compact('aquario'));
+>>>>>>> dev
     }
 }

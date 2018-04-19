@@ -5,20 +5,20 @@ $(document).ready(function() {
     $('#largura').val($(this).data('largura'));
     $('#altura').val($(this).data('altura'));
     $('#comprimento').val($(this).data('comprimento'));
-    $('#descricao').val($(this).data('descricao'));
+    $('#descricao_edit').val($(this).data('descricao'));
     $('#valor').val($(this).data('valor'));
     $('#data_desmontagem').val($(this).data('desmontagem'));
     $('#editModal').modal('show');
 });
 
   $(document).on('click', '.details-modal', function() {
-    $("#dt_montagem").val($(this).data('dt_montagem'));
-    $('#aq_largura').val($(this).data('largura'));
-    $('#aq_altura').val($(this).data('altura'));
-    $('#aq_comprimento').val($(this).data('comprimento'));
-    $('#aq_descricao').val($(this).data('descricao'));
-    $('#aq_valor').val($(this).data('valor'));
-    $('#dt_desmontagem').val($(this).data('desmontagem'));
+    $("#dt_montagem").text($(this).data('dt_montagem'));
+    $('#aq_largura').text($(this).data('largura'));
+    $('#aq_comprimento').text($(this).data('comprimento'));
+    $('#aq_altura').text($(this).data('altura'));
+    $('#aq_descricao').text($(this).data('descricao'));
+    $('#aq_valor').text($(this).data('valor'));
+    $('#dt_desmontagem').text($(this).data('desmontagem'));
     $('#detailsModal').modal('show');
 });
 
@@ -33,12 +33,12 @@ $('.modal-footer').on('click', '.edit', function() {
           'largura': $('#largura').val(),
           'altura': $('#altura').val(),
           'comprimento': $('#comprimento').val(),
-          'descricao': $('#descricao').val(),
+          'descricao': $('#descricao_edit').val(),
           'valor': $('#valor').val(),
           'data_desmontagem': $('#data_desmontagem').val()
       },
       success: function(data) {
-          
+          window.location.href="/aquario";
       }
   });
 });

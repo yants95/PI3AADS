@@ -15,19 +15,27 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::post('/adicionar-aquario', 'AquarioController@store')->name('add.aquario')->middleware('auth');;
-
-Route::resource('aquario', 'AquarioController')->middleware('auth');
-
 $this->group(['middleware' => 'auth'], function () {
 	$this->get('/home', 'AquarioController@home')->name('home');
     $this->get('/aquario', 'AquarioController@index');
     $this->get('/aquario/inserir', 'AquarioController@create')->name('create.aquario');
     $this->post('/aquario/inserir', 'AquarioController@store')->name('add.aquario');
     $this->post('/aquario/edit', 'AquarioController@update');
+<<<<<<< HEAD
     $this->post ('/aquario/apagar', 'AquarioController@destroy' );
 
     
+=======
+
+
+    $this->get('/aquario/parametros', 'ParametrosController@index');
+    $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
+    $this->post('/aquario/parametros/edit', 'ParametrosController@update');
+
+    $this->any('/aquario/buscar', 'AquarioController@pesquisa')->name('search.aquario');
+
+    $this->get('/aquario/importados', 'AquarioController@importados');
+>>>>>>> dev
     $this->get('/aquario/grafico', 'AquarioGraficoController@index')->name('aquario.grafico');
 });
 
