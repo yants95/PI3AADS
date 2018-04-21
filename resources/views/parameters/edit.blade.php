@@ -32,12 +32,12 @@
                     <div class="col-md-12"><br>
                         <div class="col-sm-4">
                             <label for="calcio">Cálcio</label>
-                            <input type="text" id="calcio" name="calcio" id="calcio" class="form-control" placeholder="Cálcio" >
+                            <input type="text" id="calcio" name="calcio" class="form-control" placeholder="Cálcio" >
                         </div>
 
                         <div class="col-sm-4">
                             <label for="magnesio">Magnésio</label>
-                            <input type="text" id="magnesio" name="magnesio" id="magnesio" placeholder="Magnésio" class="form-control" placeholder="Descrição" >
+                            <input type="text" name="magnesio" id="magnesio" placeholder="Magnésio" class="form-control" placeholder="Descrição" >
                         </div>
 
                          <div class="col-sm-4">
@@ -49,29 +49,29 @@
                     <div class="col-md-12"><br>
                         <div class="col-sm-4">
                             <label for="amonia">Amônia</label>
-                            <input type="text" id="amonia" name="amonia" placeholder="Amônia" id="amonia" class="form-control">
+                            <input type="text" id="amonia" name="amonia" placeholder="Amônia" class="form-control">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="nitrito">Nitrito</label>
-                            <input type="text" id="nitrito" name="nitrito" placeholder="Nitrato" id="nitrito" class="form-control">
+                            <input type="text" id="nitrito" name="nitrito" placeholder="Nitrato" class="form-control">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="nitrato">Nitrato</label>
-                            <input type="text" id="nitrato" name="nitrato" placeholder="Nitrato" id="nitrato" class="form-control">
+                            <input type="text" id="nitrato" name="nitrato" placeholder="Nitrato" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="col-sm-4">
                             <label for="fosfato">Fosfato</label>
-                            <input type="text" id="fosfato" name="fosfato" placeholder="Fosfato" id="fosfato" class="form-control">
+                            <input type="text" id="fosfato" name="fosfato" placeholder="Fosfato" class="form-control">
                         </div>
 
                         <div class="col-sm-4">
                             <label for="silica">Silica</label>
-                            <input type="text" id="silica" name="silica" placeholder="Silica" id="silica" class="form-control">
+                            <input type="text" id="silica" name="silica" placeholder="Silica" class="form-control">
                         </div>     
                     </div>
 
