@@ -79,7 +79,7 @@
                             <label for="aquario_relacionamento">Selecionar aquário</label>
                             <select id="aquario_id" name="aquario_id" class="form-control">
                                 <option value="null">Selecione o aquário</option>
-                                    @foreach(App\Aquario::all() as $param)
+                                    @foreach(Auth()->user()->aquario as $param)
                                         <option value="{{ $param->id }}">{{ $param->descricao }}</option>
                                     @endforeach
                             </select>

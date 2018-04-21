@@ -8,7 +8,6 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 
-    {!! Charts::assets() !!}
 
 @stop
 
@@ -17,8 +16,8 @@
         <div class="box-header">
             
         </div>
-        <div class="box-body">
-            {!! $chart->render() !!}
+        <div id="graph" class="box-body">
+            
         </div>
     </div>
 
