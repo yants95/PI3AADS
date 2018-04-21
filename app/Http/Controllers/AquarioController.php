@@ -144,6 +144,7 @@ class AquarioController extends Controller
 
         $aquario = DB::table('aquarios')
                         ->where('descricao','like','%'. $descricao . '%')
+                        ->where('user_id', Auth()->user()->id)
                         ->get();
 
         return view('aquario.index', compact('aquario'));
