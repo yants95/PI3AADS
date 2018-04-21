@@ -8,6 +8,7 @@ use App\Parametros;
 use GuzzleHtpp\Client;
 use Input;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 class AquarioController extends Controller
 {
@@ -31,9 +32,10 @@ class AquarioController extends Controller
 
     public function index()
     {
-        $aquario = Aquario::paginate(5);
-
-        return view('aquario.index', compact('aquario'));
+        if(Auth::check()) {
+            $aquario = Auth()->user()->aquario;
+            return view('aquario.index', compact('aquario'));
+        }
     }
 
     /**
@@ -54,6 +56,8 @@ class AquarioController extends Controller
      */
     public function store(Request $request)
     {
+        $user_id = Auth()->user()->id;
+
         $aquario = new Aquario([
             'data_montagem'    => $request->get('data_montagem'),
             'largura'          => $request->get('largura'),
@@ -63,6 +67,8 @@ class AquarioController extends Controller
             'valor'            => $request->get('valor'),
             'data_desmontagem' => $request->get('data_desmontagem')
         ]);
+
+        $aquario->user_id = $user_id;
 
         $aquario->save();
 
@@ -102,8 +108,8 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function home() {
-        return view('aquario.home');
+    public function geral() {
+        return view('aquario.geral');
     }
 
     public function update(Request $req)
