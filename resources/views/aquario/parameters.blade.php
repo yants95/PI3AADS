@@ -78,7 +78,7 @@
             </tbody>
         @endforeach
             </table>
-            
+        {!! $params->render() !!}
         </div>
     </div>
     @include ('parameters.edit')
