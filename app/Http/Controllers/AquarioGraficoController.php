@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Charts;
+use Khill\Lavacharts\Lavacharts;
+use App\Aquario;
 
 class AquarioGraficoController extends Controller
 {
+<<<<<<< HEAD
     public function index() {
 <<<<<<< HEAD
     	
@@ -24,4 +26,7 @@ class AquarioGraficoController extends Controller
     	return view('grafico.index', ['chart' => $chart]); 
 >>>>>>> dev
     }
+=======
+    
+>>>>>>> dev
 }

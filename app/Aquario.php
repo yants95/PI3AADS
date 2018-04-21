@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Parametros;
+use App\User;
 
 class Aquario extends Model
 {
@@ -15,4 +16,7 @@ class Aquario extends Model
     	return $this->hasMany(Parametros::class);
     }
 
-}
+    public function user() {
+    	return $this->belongsTo(User::class);
+    }
+ }

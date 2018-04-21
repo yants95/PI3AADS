@@ -31,7 +31,8 @@ $(document).ready(function() {
     $('#detailsParameters').modal('show');
 });
 
-$('.modal-footer').on('click', '.edit', function() {
+$('.modal-footer').on('click', '.edit', function(e) {
+  e.preventDefault();
   $.ajax({
       type: 'POST',
       url: '/aquario/parametros/edit',
