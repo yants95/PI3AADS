@@ -165,6 +165,7 @@ return [
         ConsoleTVs\Charts\ChartsServiceProvider::class,
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
     ],
 
     /*
@@ -215,6 +216,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class
     ],
 
 ];
