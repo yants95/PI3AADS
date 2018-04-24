@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Testando permissões de acesso
 
 Route::get('/', function () {
     return view('auth.login');
@@ -24,7 +25,7 @@ $this->group(['middleware' => 'auth'], function () {
 <<<<<<< HEAD
     $this->post ('/aquario/apagar', 'AquarioController@destroy' );
 
-    
+
 =======
 
 
