@@ -11,6 +11,18 @@
 |
 */
 
+/* -- Rotas para utilização do API Resources -- */
+
+use App\User;
+use App\Http\Resources\Aquarios as AquariosResource;
+
+Route::get('/endpoint', function() {
+   $user = User::find(1);
+   return new AquariosResource($user);
+});
+
+/* -------------------------------------------- */
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -24,7 +36,7 @@ $this->group(['middleware' => 'auth'], function () {
 <<<<<<< HEAD
     $this->post ('/aquario/apagar', 'AquarioController@destroy' );
 
-    
+
 =======
 
 
