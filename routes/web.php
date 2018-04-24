@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Testando permissões de acesso
+
+/* -- Rotas para utilização do API -- */
+
+
+
+/* ---------------------------------- */
 
 Route::get('/', function () {
     return view('auth.login');
