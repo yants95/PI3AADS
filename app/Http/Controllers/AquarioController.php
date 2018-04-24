@@ -4,20 +4,44 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
+<<<<<<< HEAD
+=======
+use App\Parametros;
+use GuzzleHtpp\Client;
+use Input;
+use Illuminate\Support\Facades\DB;
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+use Auth;
+>>>>>>> dev
 
 class AquarioController extends Controller
 {
-  
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function importados() {
+        $client = new Client([
+            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
+        ]);
+
+        $response = $client->request('GET');
+
+        $importados = json_decode($response->getBody()->getContents());
+
+        return $importados;
+    }
+
     public function index()
     {
-        $aquario = Aquario::paginate(5);
-
-        return view('aquario.aquario', compact('aquario'));
+        if(Auth::check()) {
+            $aquario = Auth()->user()->aquario;
+            return view('aquario.index', compact('aquario'));
+        }
     }
 
     /**
@@ -27,7 +51,7 @@ class AquarioController extends Controller
      */
     public function create()
     {
-        return view('aquario.create');
+        //
     }
 
     /**
@@ -38,19 +62,23 @@ class AquarioController extends Controller
      */
     public function store(Request $request)
     {
+        $user_id = Auth()->user()->id;
+
         $aquario = new Aquario([
-          'data_montagem'    => $request->get('data_montagem'),
-          'largura'          => $request->get('largura'),
-          'comprimento'      => $request->get('comprimento'),
-          'altura'           => $request->get('altura'),
-          'descricao'        => $request->get('descricao'),
-          'valor'            => $request->get('valor'),
-          'data_desmontagem' => $request->get('data_desmontagem')
+            'data_montagem'    => $request->get('data_montagem'),
+            'largura'          => $request->get('largura'),
+            'comprimento'      => $request->get('comprimento'),
+            'altura'           => $request->get('altura'),
+            'descricao'        => $request->get('descricao'),
+            'valor'            => $request->get('valor'),
+            'data_desmontagem' => $request->get('data_desmontagem')
         ]);
+
+        $aquario->user_id = $user_id;
 
         $aquario->save();
 
-        return redirect('/aquario')->with('success', 'TESTE');
+        return redirect('/aquario');
     }
 
     /**
@@ -85,19 +113,25 @@ class AquarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $aquario = Aquario::find($id);
-        $aquario->data_montagem    = $request->get('data_montagem');
-        $aquario->largura          = $request->get('largura');
-        $aquario->comprimento      = $request->get('comprimento');
-        $aquario->altura           = $request->get('altura');
-        $aquario->descricao        = $request->get('descricao');
-        $aquario->valor            = $request->get('valor');
-        $aquario->data_desmontagem = $request->get('data_desmontagem');
-        $aquario->save();
 
-        return redirect('/aquario')->with('message', 'TESTE');
+    public function geral() {
+        return view('aquario.geral');
+    }
+
+    public function update(Request $req)
+    {
+        $aquario = Aquario::find ($req->id);
+
+        $aquario->data_montagem     = $req->data_montagem;
+        $aquario->largura           = $req->largura;
+        $aquario->altura            = $req->altura;
+        $aquario->comprimento       = $req->comprimento;
+        $aquario->descricao         = $req->descricao;
+        $aquario->valor             = $req->valor;
+        $aquario->data_desmontagem  = $req->data_desmontagem;
+
+        $aquario->save();
+        return response()->json($aquario); 
     }
 
     /**
@@ -108,9 +142,20 @@ class AquarioController extends Controller
      */
     public function destroy($id)
     {
-      $aquario = Aquario::find($id);
-      $aquario->delete();
+        //
+<<<<<<< HEAD
+=======
+    }
 
-      return redirect('/aquario');
+    public function pesquisa(Request $request) {
+        $descricao = $request->get('descricao');
+
+        $aquario = DB::table('aquarios')
+                        ->where('descricao','like','%'. $descricao . '%')
+                        ->where('user_id', Auth()->user()->id)
+                        ->get();
+
+        return view('aquario.index', compact('aquario'));
+>>>>>>> dev
     }
 }
