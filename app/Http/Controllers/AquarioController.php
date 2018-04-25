@@ -4,17 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Aquario;
-<<<<<<< HEAD
-=======
 use App\Parametros;
 use GuzzleHtpp\Client;
 use Input;
 use Illuminate\Support\Facades\DB;
-<<<<<<< HEAD
->>>>>>> dev
-=======
 use Auth;
->>>>>>> dev
 
 class AquarioController extends Controller
 {
@@ -142,9 +136,7 @@ class AquarioController extends Controller
      */
     public function destroy($id)
     {
-        //
-<<<<<<< HEAD
-=======
+
     }
 
     public function pesquisa(Request $request) {
@@ -156,6 +148,5 @@ class AquarioController extends Controller
                         ->get();
 
         return view('aquario.index', compact('aquario'));
->>>>>>> dev
     }
 }
