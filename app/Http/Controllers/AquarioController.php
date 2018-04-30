@@ -18,7 +18,17 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    
+    public function importados() {
+        $client = new Client([
+            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
+        ]);
+
+        $response = $client->request('GET');
+
+        $importados = json_decode($response->getBody()->getContents());
+
+        return $importados;
+    }
 
     public function index()
     {
