@@ -3,66 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Services\AquarioService;
 use App\Aquario;
 use App\Parametros;
 use App\Arduino;
 
-=======
-use App\Aquario;
-use App\Parametros;
-use GuzzleHtpp\Client;
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
 use Input;
 use Illuminate\Support\Facades\DB;
 use Auth;
 
 class AquarioController extends Controller
 {
-<<<<<<< HEAD
 
     protected $arduino;
 
     public function __construct(AquarioService $arduino) {
         $this->arduino = $arduino;
     }
-=======
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     
-<<<<<<< HEAD
     public function get_temperatura() {
         $temperatura = $this->arduino->all();
         
         return view('aquario.geral', compact('temperatura'));
-=======
-    public function importados() {
-        $client = new Client([
-            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
-        ]);
-
-        $response = $client->request('GET');
-
-        $importados = json_decode($response->getBody()->getContents());
-
-        return $importados;
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     }
 
     public function index()
     {
         if(Auth::check()) {
             $aquario = Auth()->user()->aquario;
-<<<<<<< HEAD
             return view('aquario.index', ['aquario' => $aquario]);
-=======
-            return view('aquario.index', compact('aquario'));
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
         }
     }
 
@@ -76,7 +50,6 @@ class AquarioController extends Controller
         //
     }
 
-<<<<<<< HEAD
     public function tomadas() {
         return view('aquario.tomadas');
     }
@@ -99,8 +72,6 @@ class AquarioController extends Controller
         return redirect('/aquario/arduino');       
     }
 
-=======
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     /**
      * Store a newly created resource in storage.
      *
@@ -189,11 +160,7 @@ class AquarioController extends Controller
      */
     public function destroy($id)
     {
-<<<<<<< HEAD
         //
-=======
-
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     }
 
     public function pesquisa(Request $request) {
