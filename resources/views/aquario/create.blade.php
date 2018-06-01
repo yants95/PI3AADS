@@ -9,7 +9,11 @@
 
             <div class="modal-body">         
 
+<<<<<<< HEAD
                 <form class="form-horizontal" action="{{ route('add.aquario') }}" method="POST">
+=======
+                <form class="form-horizontal" id="formulario_clientes" action="{{ route('add.aquario') }}" method="POST">
+>>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
                     {!! csrf_field() !!}                    
 
                     <div class="col-md-12">
