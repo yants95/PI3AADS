@@ -10,20 +10,14 @@
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
         "jeroennoten/laravel-adminlte": "^1.23",
-<<<<<<< HEAD
         "khill/lavacharts": "3.0.*",
-=======
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "uxweb/sweet-alert": "^1.4",
-<<<<<<< HEAD
         "xethron/migrations-generator": "^2.0"
-=======
         "xethron/migrations-generator": "^2.0",
         "khill/lavacharts" : "3.0.*"
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     },
     "require-dev": {
         "filp/whoops": "^2.0",
