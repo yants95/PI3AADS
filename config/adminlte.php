@@ -114,18 +114,15 @@ return [
             'icon'        => '',
         ],
         [
-<<<<<<< HEAD
             'text'        => 'Arduino',
-            'url'         => '#',
+            'url'         => '/aquario/arduino',
             'icon'        => '',
         ],
         [
             'text'        => 'Gráficos',
             'url'         => '#',
-=======
             'text'        => 'Gráficos',
             'url'         => '/aquario/grafico',
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
             'icon'        => '',
         ],
         [
@@ -135,11 +132,7 @@ return [
         ],
         [
             'text'        => 'Tomadas',
-<<<<<<< HEAD
             'url'         => '/aquario/tomadas',
-=======
-            'url'         => '#',
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
             'icon'        => '',
         ],
         [

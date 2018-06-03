@@ -26,7 +26,6 @@
                     <tr>
                         <th>IP</th>
                         <th>MAC Address</th>
-                        <th>Aquario ID</th>
 
                     </tr>
                 </thead>
@@ -35,16 +34,6 @@
                 <tr>
                     <td>{{ $objArduino->ip }}</td>
                     <td>{{ $objArduino->mac_address }}</td>
-                    <td></td>
-                    <td>
-                    <button class="edit-modal btn btn-primary">
-                        <span class="glyphicon glyphicon-edit"></span> Editar
-                    </button>
-
-                    <button class="details-modal btn btn-info">
-                        <span class="glyphicon glyphicon-th-list"></span> Detalhes
-                    </button>
-                    </td>
                 </tr>
             @endforeach
             </tbody>

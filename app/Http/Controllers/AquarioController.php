@@ -56,7 +56,7 @@ class AquarioController extends Controller
 
     public function arduino() {
         $arduino = Arduino::all();
-        return view('arduino.geral', compact('arduino'));
+        return view('arduino.index', compact('arduino'));
     }
 
     public function store_arduino(Request $request){

@@ -156,27 +156,16 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-<<<<<<< HEAD
-        // App\Providers\BroadcastServiceProvider::class,
-=======
         App\Providers\BroadcastServiceProvider::class,
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-<<<<<<< HEAD
-        Way\Generators\GeneratorsServiceProvider::class,
-        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
-        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
         ConsoleTVS\Charts\ChartsServiceProvider::class,
-=======
-        ConsoleTVs\Charts\ChartsServiceProvider::class,
         Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     ],
 
     /*
@@ -225,13 +214,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-<<<<<<< HEAD
         'Charts' => ConsoleTVS\Charts\Chart::class,
-=======
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
         'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class
->>>>>>> 2fc741a72cdf9c8c21e1fb138a231ec601117a34
     ],
 
 ];

@@ -2,6 +2,8 @@
 
 namespace ConsoleTVs\Charts\Classes;
 
+use Balping\JsonRaw\Encoder;
+use Balping\JsonRaw\Raw;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\View;
 
@@ -272,7 +274,7 @@ class BaseChart
      */
     public function formatLabels()
     {
-        return json_encode($this->labels);
+        return Encoder::encode($this->labels);
     }
 
     /**
@@ -288,9 +290,22 @@ class BaseChart
             return '';
         }
 
-        $options = json_encode($this->options);
+        $options = Encoder::encode($this->options);
 
         return $noBraces ? substr($options, 1, -1) : $options;
+    }
+
+    /**
+     * Use this to pass values to json without any modification
+     * Useful for defining callbacks.
+     *
+     * @param string $value
+     *
+     * @return \Balping\JsonRaw\Raw
+     */
+    public function rawObject(string $value)
+    {
+        return new Raw($value);
     }
 
     /**
@@ -320,14 +335,16 @@ class BaseChart
         //     ->format($this->labels)
         //     ->toJson();
 
-        return Collection::make($this->datasets)
-            ->each(function ($dataset) {
-                $dataset->matchValues(count($this->labels));
-            })
-            ->map(function ($dataset) {
-                return $dataset->format($this->labels);
-            })
-            ->toJson();
+        return Encoder::encode(
+            Collection::make($this->datasets)
+                ->each(function ($dataset) {
+                    $dataset->matchValues(count($this->labels));
+                })
+                ->map(function ($dataset) {
+                    return $dataset->format($this->labels);
+                })
+                ->toArray()
+        );
     }
 
     /**
