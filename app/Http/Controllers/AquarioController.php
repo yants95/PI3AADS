@@ -3,38 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\AquarioService;
 use App\Aquario;
 use App\Parametros;
-use GuzzleHtpp\Client;
+use App\Arduino;
+
 use Input;
 use Illuminate\Support\Facades\DB;
 use Auth;
 
 class AquarioController extends Controller
 {
+
+    protected $arduino;
+
+    public function __construct(AquarioService $arduino) {
+        $this->arduino = $arduino;
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     
-    public function importados() {
-        $client = new Client([
-            'base_uri' => 'https://aquarios-c47c4.firebaseio.com/dados/00001.json',
-        ]);
-
-        $response = $client->request('GET');
-
-        $importados = json_decode($response->getBody()->getContents());
-
-        return $importados;
+    public function get_temperatura() {
+        $temperatura = $this->arduino->all();
+        
+        return view('aquario.geral', compact('temperatura'));
     }
 
     public function index()
     {
         if(Auth::check()) {
             $aquario = Auth()->user()->aquario;
-            return view('aquario.index', compact('aquario'));
+            return view('aquario.index', ['aquario' => $aquario]);
         }
     }
 
@@ -46,6 +48,28 @@ class AquarioController extends Controller
     public function create()
     {
         //
+    }
+
+    public function tomadas() {
+        return view('aquario.tomadas');
+    }
+
+    public function arduino() {
+        $arduino = Arduino::all();
+        return view('arduino.index', compact('arduino'));
+    }
+
+    public function store_arduino(Request $request){
+        
+        $arduino = new Arduino([
+            'ip'            => $request->get('ip'),
+            'mac_address'   => $request->get('mac_address')
+        ]);
+
+
+        $arduino->save();
+
+        return redirect('/aquario/arduino');       
     }
 
     /**

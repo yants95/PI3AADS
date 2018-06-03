@@ -9,7 +9,7 @@
 
             <div class="modal-body">         
 
-                <form class="form-horizontal" id="formulario_clientes" action="{{ route('add.aquario') }}" method="POST">
+                <form class="form-horizontal" action="{{ route('add.aquario') }}" method="POST">
                     {!! csrf_field() !!}                    
 
                     <div class="col-md-12">

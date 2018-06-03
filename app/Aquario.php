@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Parametros;
 use App\User;
+use App\Arduino;
 
 class Aquario extends Model
 {
@@ -18,5 +19,9 @@ class Aquario extends Model
 
     public function user() {
     	return $this->belongsTo(User::class);
+    }
+
+    public function arduino() {
+        return $this->hasOne(Arduino::class);
     }
  }

@@ -114,6 +114,13 @@ return [
             'icon'        => '',
         ],
         [
+            'text'        => 'Arduino',
+            'url'         => '/aquario/arduino',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Gráficos',
+            'url'         => '#',
             'text'        => 'Gráficos',
             'url'         => '/aquario/grafico',
             'icon'        => '',
@@ -125,7 +132,7 @@ return [
         ],
         [
             'text'        => 'Tomadas',
-            'url'         => '#',
+            'url'         => '/aquario/tomadas',
             'icon'        => '',
         ],
         [
