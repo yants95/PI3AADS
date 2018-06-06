@@ -162,15 +162,4 @@ class AquarioController extends Controller
     {
         //
     }
-
-    public function pesquisa(Request $request) {
-        $descricao = $request->get('descricao');
-
-        $aquario = DB::table('aquarios')
-                        ->where('descricao','like','%'. $descricao . '%')
-                        ->where('user_id', Auth()->user()->id)
-                        ->get();
-
-        return view('aquario.index', compact('aquario'));
-    }
 }

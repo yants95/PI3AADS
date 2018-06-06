@@ -30,7 +30,6 @@ $this->group(['middleware' => 'auth'], function () {
     $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
     $this->post('/aquario/parametros/edit', 'ParametrosController@update');
 
-    $this->any('/aquario/buscar', 'AquarioController@pesquisa')->name('search.aquario');
 
     $this->get('/aquario/grafico', 'AquarioGraficoController@index')->name('aquario.grafico');
 });
