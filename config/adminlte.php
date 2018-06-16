@@ -119,13 +119,6 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Gráficos',
-            'url'         => '#',
-            'text'        => 'Gráficos',
-            'url'         => '/aquario/grafico',
-            'icon'        => '',
-        ],
-        [
             'text'        => 'Parâmetros do aquário',
             'url'         => '/aquario/parametros',
             'icon'        => '',
@@ -135,12 +128,6 @@ return [
             'url'         => '/aquario/tomadas',
             'icon'        => '',
         ],
-        [
-            'text'        => 'Iluminação',
-            'url'         => '#',
-            'icon'        => '',
-        ],
-        
         [
             'text'        => 'Meus aquários',
             'url'         => 'aquario',
