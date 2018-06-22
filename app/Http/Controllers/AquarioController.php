@@ -27,9 +27,9 @@ class AquarioController extends Controller
      */
     
     public function get_temperatura() {
-        $temperatura = $this->arduino->all();
+        $api = $this->arduino->all();
         
-        return view('aquario.geral', compact('temperatura'));
+        return view('aquario.geral', compact('api'));
     }
 
     public function index()
