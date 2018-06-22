@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 $this->group(['middleware' => 'auth'], function () {
-	$this->get('/home', 'AquarioController@get_temperatura');
+    $this->get('/home', 'AquarioController@get_temperatura');
     $this->get('/aquario', 'AquarioController@index');
     $this->get('/aquario/inserir', 'AquarioController@create')->name('create.aquario');
     $this->post('/aquario/inserir', 'AquarioController@store')->name('add.aquario');
