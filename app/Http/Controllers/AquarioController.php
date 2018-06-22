@@ -31,7 +31,7 @@ class AquarioController extends Controller
         
         return view('aquario.geral', compact('api'));
     }
-
+    
     public function index()
     {
         if(Auth::check()) {
@@ -51,7 +51,9 @@ class AquarioController extends Controller
     }
 
     public function tomadas() {
-        return view('aquario.tomadas');
+        $api = $this->arduino->all();
+        
+        return view('aquario.tomadas', compact('api'));
     }
 
     public function arduino() {
