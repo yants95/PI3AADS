@@ -9,7 +9,7 @@
             crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="{{ URL::asset('js/tomadas.js') }}"></script>
-
+    
 @stop
 
 @section('content')
@@ -18,6 +18,7 @@
             
         </div>
         <div class="box-body">
+        
             <table class="table table-hover">
                 <div class="col-md-12">
                     <div class="col-sm-2">
