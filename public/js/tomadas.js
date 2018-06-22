@@ -44,7 +44,7 @@ $(document).ready(function(){
 	
 	$("#btEnviar").on("click", function() {
 		$.ajax({
-			  type: 'POST'
+			  type: 'GET'
 			  ,url: url_final,
 			  //,dataType : 'html',
 			  beforeSend: function(){
