@@ -26,7 +26,7 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function get_temperatura() {
+    public function api() {
         $api = $this->arduino->all();
         
         return view('aquario.geral', compact('api'));
@@ -38,6 +38,10 @@ class AquarioController extends Controller
             $aquario = Auth()->user()->aquario;
             return view('aquario.index', ['aquario' => $aquario]);
         }
+    }
+    
+    public function temperatura() {
+        return view('aquario.temperatura');
     }
 
     /**
