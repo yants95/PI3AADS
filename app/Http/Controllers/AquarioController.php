@@ -44,7 +44,7 @@ class AquarioController extends Controller
         return view('aquario.temperatura');
     }
     
-    public function iluminacao() {
+    public function iluminacao_manual() {
         return view('aquario.iluminacao');
     }
 

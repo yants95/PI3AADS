@@ -24,7 +24,7 @@ $this->group(['middleware' => 'auth'], function () {
     $this->get('/aquario/tomadas', 'AquarioController@tomadas');
     $this->get('/aquario/arduino', 'AquarioController@arduino')->name('show.arduino');
     $this->get('/aquario/temperatura', 'AquarioController@temperatura')->name('show.temperatura');
-    $this->get('/aquario/iluminacao', 'AquarioController@iluminacao')->name('show.nivel_agua');
+    $this->get('/aquario/iluminacao_manual', 'AquarioController@iluminacao_manual')->name('show.iluminacao_manual');
     $this->post('/aquario/arduino', 'AquarioController@store_arduino')->name('add.arduino');
 
 

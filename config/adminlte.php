@@ -139,7 +139,12 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Iluminação',
+            'text'        => 'Iluminação manual',
+            'url'         => '/aquario/iluminacao_manual',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Iluminação automática',
             'url'         => '/aquario/iluminacao',
             'icon'        => '',
         ]
