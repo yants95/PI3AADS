@@ -43,6 +43,10 @@ class AquarioController extends Controller
     public function temperatura() {
         return view('aquario.temperatura');
     }
+    
+    public function iluminacao() {
+        return view('aquario.iluminacao');
+    }
 
     /**
      * Show the form for creating a new resource.
