@@ -12,7 +12,7 @@ $(document).ready(function(){
 		
 		$.ajax({
 			  type: 'GET'
-			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val();
+			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
 			  
 			  success: function(response){
 				  console.log(response);
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			  error: function(error, er){
 			    console.log(error);
 			  }
-		});*/
+		});
 		
 	});
 	
