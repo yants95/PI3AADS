@@ -10,21 +10,19 @@ $(document).ready(function(){
 		
 		url = "http://10.0.0.2/02/";
 		
-		/*$.ajax({
+		$.ajax({
 			  type: 'GET'
-			  ,url: "http://10.0.0.2/02/" + tempMinima + "&" + tempMaxima;
-			  //,dataType : 'html',
+			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val();
 			  
 			  success: function(response){
 				  console.log(response);
 			    preventDefault();
 			  },
 			  error: function(error, er){
-			   // console.log(error);
+			    console.log(error);
 			  }
 		});*/
 		
-		//var url_final = "http://10.0.0.2/02/" + tempMinima
 	});
 	
 });
