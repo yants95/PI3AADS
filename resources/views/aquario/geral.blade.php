@@ -52,7 +52,7 @@
            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-gear-outline"></i></span>
          
             <div class="info-box-content">
-              <span class="info-box-text">Comentários</span>
+              <span class="info-box-text">Tomada 1</span>
               <span class="info-box-number" id="comentarios"><small></small></span>
             </div>
             <!-- /.info-box-content -->
@@ -62,7 +62,7 @@
            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-gear-outline"></i></span>
          
             <div class="info-box-content">
-              <span class="info-box-text">Temperatura mínima</span>
+              <span class="info-box-text">Tomada 2</span>
               <span class="info-box-number" id="tempMinima"><small></small></span>
             </div>
             <!-- /.info-box-content -->
@@ -73,15 +73,45 @@
            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-gear-outline"></i></span>
          
             <div class="info-box-content">
-              <span class="info-box-text">Temperatura máxima</span>
+              <span class="info-box-text">Tomada 3</span>
               <span class="info-box-number" id="tempMaxima"><small></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
+        
+        <div class="info-box">
+           <span class="info-box-icon bg-yellow"><i class="ion ion-ios-gear-outline"></i></span>
+         
+            <div class="info-box-content">
+              <span class="info-box-text">Tomada 4</span>
+              <span class="info-box-number" id="tempMaxima"><small></small></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        
+        <div class="info-box">
+           <span class="info-box-icon bg-yellow"><i class="ion ion-ios-gear-outline"></i></span>
+         
+            <div class="info-box-content">
+              <span class="info-box-text">Tomada 5</span>
+              <span class="info-box-number" id="tempMaxima"><small></small></span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        
+        
       </div>
       
+      <div class="box-footer">
+      	<button class="btn btn-danger" id="desativarControle">Desativar controle de nível de água</button><br><br>
+      	<button class="btn btn-success" id="ativarControle">Ativar controle de nível de água</button>
+      </div>
       
 
 @stop
