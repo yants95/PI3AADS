@@ -137,6 +137,11 @@ return [
             'text'        => 'Temperatura',
             'url'         => '/aquario/temperatura',
             'icon'        => '',
+        ],
+        [
+            'text'        => 'Iluminação',
+            'url'         => '/aquario/iluminacao',
+            'icon'        => '',
         ]
     ],
 
