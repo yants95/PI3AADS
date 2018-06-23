@@ -15,7 +15,6 @@ $(document).ready(function(){
 			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
 			  
 			  success: function(response){
-				  console.log(response);
 			    preventDefault();
 			  },
 			  error: function(error, er){
