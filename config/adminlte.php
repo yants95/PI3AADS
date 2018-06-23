@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Projeto Aplicado',
 
     'title_prefix' => '',
 
@@ -119,13 +119,6 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Gráficos',
-            'url'         => '#',
-            'text'        => 'Gráficos',
-            'url'         => '/aquario/grafico',
-            'icon'        => '',
-        ],
-        [
             'text'        => 'Parâmetros do aquário',
             'url'         => '/aquario/parametros',
             'icon'        => '',
@@ -136,16 +129,20 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Iluminação',
-            'url'         => '#',
-            'icon'        => '',
-        ],
-        
-        [
             'text'        => 'Meus aquários',
             'url'         => 'aquario',
             'icon'        => '',
         ],
+        [
+            'text'        => 'Temperatura',
+            'url'         => '/aquario/temperatura',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Iluminação',
+            'url'         => '/aquario/iluminacao',
+            'icon'        => '',
+        ]
     ],
 
     /*

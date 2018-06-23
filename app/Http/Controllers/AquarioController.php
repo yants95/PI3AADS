@@ -26,18 +26,26 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function get_temperatura() {
-        $temperatura = $this->arduino->all();
+    public function api() {
+        $api = $this->arduino->all();
         
-        return view('aquario.geral', compact('temperatura'));
+        return view('aquario.geral', compact('api'));
     }
-
+    
     public function index()
     {
         if(Auth::check()) {
             $aquario = Auth()->user()->aquario;
             return view('aquario.index', ['aquario' => $aquario]);
         }
+    }
+    
+    public function temperatura() {
+        return view('aquario.temperatura');
+    }
+    
+    public function iluminacao() {
+        return view('aquario.iluminacao');
     }
 
     /**
@@ -51,7 +59,9 @@ class AquarioController extends Controller
     }
 
     public function tomadas() {
-        return view('aquario.tomadas');
+        $api = $this->arduino->all();
+        
+        return view('aquario.tomadas', compact('api'));
     }
 
     public function arduino() {
@@ -161,16 +171,5 @@ class AquarioController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function pesquisa(Request $request) {
-        $descricao = $request->get('descricao');
-
-        $aquario = DB::table('aquarios')
-                        ->where('descricao','like','%'. $descricao . '%')
-                        ->where('user_id', Auth()->user()->id)
-                        ->get();
-
-        return view('aquario.index', compact('aquario'));
     }
 }

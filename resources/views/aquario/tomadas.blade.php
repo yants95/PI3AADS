@@ -8,8 +8,8 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 
-    <script src="js/crud.js"></script>
-
+    <script type="text/javascript" src="{{ URL::asset('js/tomadas.js') }}"></script>
+    
 @stop
 
 @section('content')
@@ -18,44 +18,51 @@
             
         </div>
         <div class="box-body">
+        
             <table class="table table-hover">
                 <div class="col-md-12">
-                    <div class="col-sm-3">
-                        <label>Saída 1</label><br>
-                        <button type="button" class="btn btn-success">Tomada 1</button>
+                    <div class="col-sm-2">
+                        <label>Tomada 1</label><br>
+                        <select class="form-control" id="tomada1">
+                        	<option value="">Selecione</option>
+                        	<option value="1">Ligar</option>
+                        	<option value="0">Desligar</option>
+                        </select>
                     </div>
-                    <div class="col-sm-3">
-                        <label>Saída 2</label><br>
-                        <button type="button" class="btn btn-success">Tomada 2</button>
+                    <div class="col-sm-2">
+                        <label>Tomada 2</label><br>
+                        <select class="form-control" id="tomada2">
+                        	<option value="">Selecione</option>
+                        	<option value="1">Ligar</option>
+                        	<option value="0">Desligar</option>
+                        </select>
                     </div>
-                    <div class="col-sm-3">
-                        <label>Saída 3</label><br>
-                        <button type="button" class="btn btn-success">Tomada 3</button>
+                    <div class="col-sm-2">
+                        <label>Tomada 3</label><br>
+                        <select class="form-control" id="tomada3">
+                        	<option value="">Selecione</option>
+                        	<option value="1">Ligar</option>
+                        	<option value="0">Desligar</option>
+                        </select>
                     </div>
-                    <div class="col-sm-3">
-                        <label>Saída 4</label><br>
-                        <button type="button" class="btn btn-success">Tomada 4</button>
+                    <div class="col-sm-2">
+                        <label>Tomada 4</label><br>
+                        <select class="form-control" id="tomada4">
+                        	<option value="">Selecione</option>
+                        	<option value="1">Ligar</option>
+                        	<option value="0">Desligar</option>
+                        </select>
                     </div>
-                </div>
-
-                <br><br><br><br><br><br>
-
-                <div class="col-md-12">
-                    <div class="col-sm-3">
-                        <label>Saída 5</label><br>
-                        <button type="button" class="btn btn-success">Tomada 5</button>
+                    <div class="col-sm-2">
+                        <label>Tomada 5</label><br>
+                        <select class="form-control" id="tomada5">
+                        	<option value="">Selecione</option>
+                        	<option value="1">Ligar</option>
+                        	<option value="0">Desligar</option>
+                        </select>
                     </div>
-                    <div class="col-sm-3">
-                        <label>Saída 6</label><br>
-                        <button type="button" class="btn btn-success">Tomada 6</button>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Saída 7</label><br>
-                        <button type="button" class="btn btn-success">Tomada 7</button>
-                    </div>
-                    <div class="col-sm-3">
-                        <label>Saída 8</label><br>
-                        <button type="button" class="btn btn-success">Tomada 8</button>
+                    <div class="box-footer">
+                    	<button class="btn btn-success" id="btEnviar">Enviar</button>
                     </div>
                 </div>
             </table>

@@ -8,7 +8,7 @@ class AquarioService {
     
     public function all() {
         $client = new Client([
-            'base_uri' => 'https://jsonplaceholder.typicode.com/comments',
+            'base_uri' => 'https://my-json-server.typicode.com/typicode/demo/db',
         ]);
 
         $response = $client->request('GET');
