@@ -109,7 +109,7 @@ return [
 
     'menu' => [        
         [
-            'text'        => 'Geral',
+            'text'        => 'Dashboard',
             'url'         => 'home',
             'icon'        => '',
         ],
