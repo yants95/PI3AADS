@@ -133,6 +133,11 @@ return [
             'url'         => 'aquario',
             'icon'        => '',
         ],
+        [
+            'text'        => 'Temperatura',
+            'url'         => '/aquario/temperatura',
+            'icon'        => '',
+        ]
     ],
 
     /*
