@@ -11,6 +11,13 @@
 |
 */
 
+
+/* Rotas criada para exibição e desenvovimento das views */
+$this->group(['prefix' => 'frontEnd'], function() {
+    $this->get('iluninacao', 'TestController@iluninacao');
+});
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
