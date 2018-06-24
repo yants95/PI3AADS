@@ -35,7 +35,7 @@ $(document).ready(function(){
 										$.trim($("#uHorario5").val()),
 										$.trim($("#uPotencia5").val())
 									);
-
+		console.log("ok"+paramentros);
 		if(paramentros !== 0) {
 			enviarRequisicao(base_url, paramentros);
 		} else {
@@ -52,11 +52,25 @@ Funcão para validar valores passado nos inputs
 @method validarParamentro(params...)
 @return retorna string de paramentros validados
 */
-function validarParamentro(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10) {
-	if (p1 && p2 && p3 && p4 && p5 && p6 && p7 && p8 && p9 && p10) {
-		return `0${p1}0${p2}0${p3}0${p4}0${p5}0${p6}0${p7}0${p8}0${p9}0${p10}`;
+function validarParamentro(h1, p2, h3, p4, h5, p6, h7, p8, h9, p10) {
+	if (h1 && p2 && h3 && p4 && h5 && p6 && h7 && p8 && h9 && p10) {
+		return `${h1}${is100(p2)}${h3}${is100(p4)}${h5}${is100(p6)}${h7}${is100(p8)}${h9}${is100(p10)}`;
 	} else {
 		return 0;
+	}
+}
+
+/*
+Funcão para validar se o valor é igual 0
+
+@method validarParamentro(number)
+@return retorna um valor de três casas decimais
+*/
+function is100(number) {
+	if (number == 100) {
+		return number
+	} else {
+		return `0${number}`;
 	}
 }
 
