@@ -3,7 +3,6 @@ $(document).ready(function(){
 
 	$("#EnviarCincoPrimeiros").on("click", function() {
 		let paramentros = validarParamentro(
-										"Primeiro Horario.",
 										$.trim($("#pHorario1").val()),
 										$.trim($("#pPotencia1").val()),
 										$.trim($("#pHorario2").val()),
@@ -15,7 +14,13 @@ $(document).ready(function(){
 										$.trim($("#pHorario5").val()),
 										$.trim($("#pPotencia5").val())
 									);
-		enviarRequisicao(base_url, paramentros);
+
+		if(paramentros !== 0) {
+			enviarRequisicao(base_url, paramentros);
+		} else {
+			alert("Preenchar todos os campos para primeiro horario.");
+		}
+
 	});
 
 	$("#EnviarCincoUltimos").on("click", function() {
@@ -27,14 +32,14 @@ $(document).ready(function(){
 /*
 Funcão para validar valores passado nos inputs
 
-@method validarParamentro(params..., mensagem)
+@method validarParamentro(params...)
 @return retorna string de paramentros validados
 */
-function validarParamentro(mensagem, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10) {
+function validarParamentro(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10) {
 	if (p1 && p2 && p3 && p4 && p5 && p6 && p7 && p8 && p9 && p10) {
 		return `0${p1}0${p2}0${p3}0${p4}0${p5}0${p6}0${p7}0${p8}0${p9}0${p10}`;
 	} else {
-		alert(`Preenchar todos os campos para o ${mensagem}`);
+		return 0;
 	}
 }
 
@@ -46,6 +51,7 @@ Funcão para realizar requisição
 function enviarRequisicao(url, paramentros) {
 	// monstar url final para requisição
 	let url_final = url+paramentros;
+	console.log(url_final);
 	$.ajax({
 		url: url_final,
 		type: 'GET',
