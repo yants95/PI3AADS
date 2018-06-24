@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var base_url = "http://10.0.0.2/05/";
 
 	$("#EnviarCincoPrimeiros").on("click", function() {
@@ -16,8 +15,11 @@ $(document).ready(function(){
 										$.trim($("#pHorario5").val()),
 										$.trim($("#pPotencia5").val())
 									);
-
 		enviarRequisicao(base_url, paramentros);
+	});
+
+	$("#EnviarCincoUltimos").on("click", function() {
+		// ...
 	});
 
 });
