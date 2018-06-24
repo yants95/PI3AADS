@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Iluminação  ')
+@section('title', 'Iluminação manual')
 
 @section('content_header')
-    <h1>Iluminação</h1>
+    <h1>Iluminação manual</h1>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
