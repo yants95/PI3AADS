@@ -144,8 +144,13 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Iluminação automática',
-            'url'         => '/aquario/iluminacao',
+            'text'        => 'Canal azul',
+            'url'         => '/aquario/canal_azul',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Canal branco',
+            'url'         => '/aquario/canal_branco',
             'icon'        => '',
         ]
     ],
