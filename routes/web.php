@@ -25,6 +25,8 @@ $this->group(['middleware' => 'auth'], function () {
     $this->get('/aquario/arduino', 'AquarioController@arduino')->name('show.arduino');
     $this->get('/aquario/temperatura', 'AquarioController@temperatura')->name('show.temperatura');
     $this->get('/aquario/iluminacao_manual', 'AquarioController@iluminacao_manual')->name('show.iluminacao_manual');
+    $this->get('/aquario/canal_azul', 'AquarioController@canal_azul')->name('show.canal_azul');
+    $this->get('/aquario/canal_branco', 'AquarioController@canal_branco')->name('show.canal_branco');
     $this->post('/aquario/arduino', 'AquarioController@store_arduino')->name('add.arduino');
 
 
