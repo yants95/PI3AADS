@@ -20,11 +20,28 @@ $(document).ready(function(){
 		} else {
 			alert("Preenchar todos os campos para primeiro horario.");
 		}
-
 	});
 
 	$("#EnviarCincoUltimos").on("click", function() {
-		// ...
+		let paramentros = validarParamentro(
+										$.trim($("#uHorario1").val()),
+										$.trim($("#uPotencia1").val()),
+										$.trim($("#uHorario2").val()),
+										$.trim($("#uPotencia2").val()),
+										$.trim($("#uHorario3").val()),
+										$.trim($("#uPotencia3").val()),
+										$.trim($("#uHorario4").val()),
+										$.trim($("#uPotencia4").val()),
+										$.trim($("#uHorario5").val()),
+										$.trim($("#uPotencia5").val())
+									);
+
+		if(paramentros !== 0) {
+			enviarRequisicao(base_url, paramentros);
+		} else {
+			alert("Preenchar todos os campos para ultimos horario.");
+		}
+
 	});
 
 });
