@@ -47,6 +47,14 @@ class AquarioController extends Controller
     public function iluminacao_manual() {
         return view('aquario.iluminacao');
     }
+    
+    public function canal_azul() {
+        return view('aquario.canal_azul');
+    }
+    
+    public function canal_branco() {
+        return view('aquario.canal_branco');
+    }
 
     /**
      * Show the form for creating a new resource.
