@@ -88,7 +88,7 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="ano
 
     </table>
     <div class="box-footer">
-      <button class="btn btn-success" id="primeirosHorarios5">Enviar 5 primeiros horários</button>
+      <button class="btn btn-success" id="EnviarCincoPrimeiros">Enviar 5 primeiros horários</button>
       <button class="btn btn-success" id="ultimosHorarios5">Enviar 5 últimos horários</button>
     </div>
   </div>
