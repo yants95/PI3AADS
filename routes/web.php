@@ -14,7 +14,8 @@
 
 /* Rotas criada para exibição e desenvovimento das views */
 $this->group(['prefix' => 'frontEnd'], function() {
-    $this->get('iluninacao', 'TestController@iluninacao');
+    $this->get('canalazul', 'TestController@exibirCanalAzul');
+    $this->get('canalbranco', 'TestController@exibirCanalBranco');
 });
 
 

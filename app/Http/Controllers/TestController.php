@@ -7,7 +7,12 @@ use App\Http\Controllers\Controller;
 
 class TestController extends Controller
 {
-    public function iluninacao(){
-      return view('aquario.geral');
+    public function exibirCanalAzul(){
+      return view('aquario.canal_azul');
+    }
+
+    public function exibirCanalBranco()
+    {
+      return view('aquario.canal_branco');
     }
 }
