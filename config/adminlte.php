@@ -109,7 +109,7 @@ return [
 
     'menu' => [        
         [
-            'text'        => 'Geral',
+            'text'        => 'Dashboard',
             'url'         => 'home',
             'icon'        => '',
         ],
@@ -139,8 +139,18 @@ return [
             'icon'        => '',
         ],
         [
-            'text'        => 'Iluminação',
-            'url'         => '/aquario/iluminacao',
+            'text'        => 'Iluminação manual',
+            'url'         => '/aquario/iluminacao_manual',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Canal azul',
+            'url'         => '/aquario/canal_azul',
+            'icon'        => '',
+        ],
+        [
+            'text'        => 'Canal branco',
+            'url'         => '/aquario/canal_branco',
             'icon'        => '',
         ]
     ],

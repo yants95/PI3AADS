@@ -11,6 +11,14 @@
 |
 */
 
+
+/* Rotas criada para exibição e desenvovimento das views */
+$this->group(['prefix' => 'frontEnd'], function() {
+    $this->get('canalazul', 'TestController@exibirCanalAzul');
+    $this->get('canalbranco', 'TestController@exibirCanalBranco');
+});
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -24,13 +32,17 @@ $this->group(['middleware' => 'auth'], function () {
     $this->get('/aquario/tomadas', 'AquarioController@tomadas');
     $this->get('/aquario/arduino', 'AquarioController@arduino')->name('show.arduino');
     $this->get('/aquario/temperatura', 'AquarioController@temperatura')->name('show.temperatura');
-    $this->get('/aquario/iluminacao', 'AquarioController@iluminacao')->name('show.nivel_agua');
+    $this->get('/aquario/iluminacao_manual', 'AquarioController@iluminacao_manual')->name('show.iluminacao_manual');
+    $this->get('/aquario/canal_azul', 'AquarioController@canal_azul')->name('show.canal_azul');
+    $this->get('/aquario/canal_branco', 'AquarioController@canal_branco')->name('show.canal_branco');
     $this->post('/aquario/arduino', 'AquarioController@store_arduino')->name('add.arduino');
 
 
     $this->get('/aquario/parametros', 'ParametrosController@index');
     $this->post('/aquario/parametros', 'ParametrosController@store')->name('add.parameters');
     $this->post('/aquario/parametros/edit', 'ParametrosController@update');
+
+    $this->get('/aquario/potencia_iluminacao', 'iluminacaoController@index');
 });
 
 Auth::routes();
