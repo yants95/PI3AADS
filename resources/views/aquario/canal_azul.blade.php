@@ -23,64 +23,64 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="ano
       <div class="col-md-12">
         <div class="col-sm-2 offset-2">
           <label>1º horário e potência</label><br>
-          <input type="text" class="form-control" id="pHorario1" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="pPotencia1" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="pHorario1" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="pPotencia1" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>2º horário e potência</label><br>
-          <input type="text" class="form-control" id="pHorario2" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="pPotencia2" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="pHorario2" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="pPotencia2" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>3º horário e potência</label><br>
-          <input type="text" class="form-control" id="pHorario3" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="pPotencia3" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="pHorario3" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="pPotencia3" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>4º horário e potência</label><br>
-          <input type="text" class="form-control" id="pHorario4"  placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="pPotencia4" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="pHorario4"  placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="pPotencia4" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>5º horário e potência</label><br>
-          <input type="text" class="form-control" id="pHorario5"  placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="pPotencia5" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="pHorario5"  placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="pPotencia5" placeholder="Potência: 70% vira 070">
         </div>
       </div><br><br><br><br><br><br><br><br>
 
       <div class="col-md-12">
         <div class="col-sm-2 offset-2">
           <label>1º horário e potência</label><br>
-          <input type="text" class="form-control" id="uHorario1" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="uPotencia1" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="uHorario1" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="uPotencia1" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>2º horário e potência</label><br>
-          <input type="text" class="form-control" id="uHorario2" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="uPotencia2" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="uHorario2" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="uPotencia2" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>3º horário e potência</label><br>
-          <input type="text" class="form-control" id="uHorario3" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="uPotencia3" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="uHorario3" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="uPotencia3" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>4º horário e potência</label><br>
-          <input type="text" class="form-control" id="uHorario4" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="uPotencia4" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="uHorario4" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="uPotencia4" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
           <label>5º horário e potência</label><br>
-          <input type="text" class="form-control" id="uHorario5" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="text" class="form-control" id="uPotencia5" placeholder="Potência: 70% vira 070">
+          <input type="time" class="form-control" id="uHorario5" placeholder="Hora 08:30 vira 0830"><br>
+          <input type="number" class="form-control" id="uPotencia5" placeholder="Potência: 70% vira 070">
         </div>
       </div><br><br><br><br>
 

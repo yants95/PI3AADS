@@ -67,10 +67,17 @@ Funcão para validar se o valor é igual 0
 @return retorna um valor de três casas decimais
 */
 function is100(number) {
-	if (number == 100) {
-		return number
-	} else {
-		return `0${number}`;
+	let numberString = String(number);
+	//var response = numberString.split("");
+length
+	if(numberString.length <= 3 && number > 0 && number <= 100) {
+		if (number == 100) {
+			return number;
+		} else if (numberString.length == 2) {
+			return `0${number}`;
+		} else if (numberString.length == 2) {
+			return `00${number}`;
+		}
 	}
 }
 
