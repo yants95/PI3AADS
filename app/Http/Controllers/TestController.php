@@ -15,4 +15,8 @@ class TestController extends Controller
     {
       return view('aquario.canal_branco');
     }
+
+    public function exibirTemperatura() {
+      return view('aquario.temperatura');
+    }
 }
