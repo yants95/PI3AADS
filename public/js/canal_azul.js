@@ -2,6 +2,11 @@ $(document).ready(function(){
 	var base_url = "http://10.0.0.2/05/";
 
 	$("#EnviarCincoPrimeiros").on("click", function() {
+		console.log($("#pPotencia2").val());
+		console.log($("#pPotencia4").val());
+		console.log($("#pPotencia5").val());
+		console.log($("#pPotencia3").val());
+		console.log($("#pPotencia1").val());
 		let paramentros = validarParamentro(
 										$.trim($("#pHorario1").val()),
 										$.trim($("#pPotencia1").val()),
@@ -35,7 +40,6 @@ $(document).ready(function(){
 										$.trim($("#uHorario5").val()),
 										$.trim($("#uPotencia5").val())
 									);
-		console.log("ok"+paramentros);
 		if(paramentros !== 0) {
 			enviarRequisicao(base_url, paramentros);
 		} else {
@@ -54,7 +58,8 @@ Funcão para validar valores passado nos inputs
 */
 function validarParamentro(h1, p2, h3, p4, h5, p6, h7, p8, h9, p10) {
 	if (h1 && p2 && h3 && p4 && h5 && p6 && h7 && p8 && h9 && p10) {
-		return `${h1}${is100(p2)}${h3}${is100(p4)}${h5}${is100(p6)}${h7}${is100(p8)}${h9}${is100(p10)}`;
+		let  aux = `${h1}${is100(p2)}${h3}${is100(p4)}${h5}${is100(p6)}${h7}${is100(p8)}${h9}${is100(p10)}`;
+		return aux;
 	} else {
 		return 0;
 	}
@@ -69,7 +74,6 @@ Funcão para validar se o valor é igual 0
 function is100(number) {
 	let numberString = String(number);
 	//var response = numberString.split("");
-length
 	if(numberString.length <= 3 && number > 0 && number <= 100) {
 		if (number == 100) {
 			return number;
@@ -100,4 +104,21 @@ function enviarRequisicao(url, paramentros) {
 			console.log(error);
 		}
 	});
+}
+
+
+function maxLengthCheck(object) {
+	if (object.value.length > object.max.length)
+		object.value = object.value.slice(0, object.max.length)
+}
+
+function isNumeric (evt) {
+	var theEvent = evt || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode (key);
+	var regex = /[0-9]|\./;
+	if ( !regex.test(key) ) {
+		theEvent.returnValue = false;
+		if(theEvent.preventDefault) theEvent.preventDefault();
+	}
 }

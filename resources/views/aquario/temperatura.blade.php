@@ -9,16 +9,16 @@
             crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="{{ URL::asset('js/temperatura.js') }}"></script>
-    
+
 @stop
 
 @section('content')
     <div class="box">
         <div class="box-header">
-            
+
         </div>
         <div class="box-body">
-        
+
             <table class="table table-hover">
                 <div class="col-md-12">
                     <div class="col-sm-3">
@@ -32,11 +32,15 @@
                     	<input type="text" class="form-control" id="tempMaxima" placeholder="Exemplo: 27.5" required>
                     </div>
                 </div>
+
+                <div class="col-md-12">
+                <div class="box-footer">
+                  <button class="btn btn-success" id="btEnviar">Enviar</button>
+                </div>
+                </div>
             </table>
-            <div class="box-footer">
-            	<button class="btn btn-success" id="btEnviar">Enviar</button>
-            </div>
+
         </div>
     </div>
-    
+
 @stop

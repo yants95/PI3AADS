@@ -22,9 +22,9 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="ano
 
       <div class="col-md-12">
         <div class="col-sm-2 offset-2">
-          <label>1º horário e potência</label><br>
+          <label>1º ssshorário e potência</label><br>
           <input type="time" class="form-control" id="pHorario1" placeholder="Hora 08:30 vira 0830"><br>
-          <input type="number" class="form-control" id="pPotencia1" placeholder="Potência: 70% vira 070">
+          <input type="number" oninput="maxLengthCheck(this)" min="1" max="100" maxlength = "3" class="form-control" id="pPotencia1" placeholder="Potência: 70% vira 070">
         </div>
 
         <div class="col-sm-2">
