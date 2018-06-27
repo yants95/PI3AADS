@@ -35,7 +35,6 @@ $(document).ready(function(){
 										$.trim($("#uHorario5").val()),
 										$.trim($("#uPotencia5").val())
 									);
-		console.log("ok"+paramentros);
 		if(paramentros !== 0) {
 			enviarRequisicao(base_url, paramentros);
 		} else {
@@ -54,30 +53,39 @@ Funcão para validar valores passado nos inputs
 */
 function validarParamentro(h1, p2, h3, p4, h5, p6, h7, p8, h9, p10) {
 	if (h1 && p2 && h3 && p4 && h5 && p6 && h7 && p8 && h9 && p10) {
-		return `${h1}${is100(p2)}${h3}${is100(p4)}${h5}${is100(p6)}${h7}${is100(p8)}${h9}${is100(p10)}`;
+		let  aux = `${replaceDoisPontos(h1)}${incluirZeros(p2)}${replaceDoisPontos(h3)}${incluirZeros(p4)}${replaceDoisPontos(h5)}${incluirZeros(p6)}${replaceDoisPontos(h7)}${incluirZeros(p8)}${replaceDoisPontos(h9)}${incluirZeros(p10)}`;
+		return aux;
 	} else {
 		return 0;
 	}
+}
+/*
+Funcão para remover : pontos do horario
+*/
+
+function replaceDoisPontos(horario) {
+	return horario.replace(':','');
 }
 
 /*
 Funcão para validar se o valor é igual 0
 
-@method validarParamentro(number)
+@method incluirZeros(number)
 @return retorna um valor de três casas decimais
 */
-function is100(number) {
+function incluirZeros(number) {
 	let numberString = String(number);
 	//var response = numberString.split("");
-length
-	if(numberString.length <= 3 && number > 0 && number <= 100) {
+	if(number > 0 && number <= 100) {
 		if (number == 100) {
 			return number;
 		} else if (numberString.length == 2) {
 			return `0${number}`;
-		} else if (numberString.length == 2) {
+		} else if (numberString.length == 1) {
 			return `00${number}`;
 		}
+	} else {
+		return 100; // Se o valor informado for maior que 100, então setar a maior potencia possivel;
 	}
 }
 
@@ -89,7 +97,7 @@ Funcão para realizar requisição
 function enviarRequisicao(url, paramentros) {
 	// monstar url final para requisição
 	let url_final = url+paramentros;
-	console.log(url_final);
+	console.log("URL FINAL: "+url_final);
 	$.ajax({
 		url: url_final,
 		type: 'GET',
@@ -100,4 +108,23 @@ function enviarRequisicao(url, paramentros) {
 			console.log(error);
 		}
 	});
+}
+
+/*
+Funcão para realizar validação dos campos numericos no onInput
+*/
+function maxLengthCheck(object) {
+	if (object.value.length > object.max.length)
+		object.value = object.value.slice(0, object.max.length)
+}
+
+function isNumeric (evt) {
+	var theEvent = evt || window.event;
+	var key = theEvent.keyCode || theEvent.which;
+	key = String.fromCharCode (key);
+	var regex = /[0-9]|\./;
+	if ( !regex.test(key) ) {
+		theEvent.returnValue = false;
+		if(theEvent.preventDefault) theEvent.preventDefault();
+	}
 }
