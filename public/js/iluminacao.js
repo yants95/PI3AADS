@@ -42,7 +42,7 @@ $(document).ready(function(){
 		
 		url = "http://10.0.0.2/04/";
 		
-		/*$.ajax({
+		$.ajax({
 			  type: 'GET'
 			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
 			  
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			  error: function(error, er){
 			    console.log(error);
 			  }
-		});*/
+		});
 		
 	});
 	
