@@ -2,9 +2,26 @@ $(document).ready(function(){
 	
 	var url = "http://10.0.0.2/02/";
 	
+	
+	
 	$("#btEnviar").on("click", function() {
 		
-		url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val();
+		if($("#tempMinima").val() == "") {
+			alert("Preencha a temperatura mínima");
+			return false;
+		}
+		
+		if($("#tempMaxima").val() == "") {
+			alert("Preencha a temperatura máxima");
+			return false;
+		}
+		
+		if($("#tempIdeal").val() == "") {
+			alert("Preencha a temperatura ideal");
+			return false;
+		}
+		
+		url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val() + "&" + $("#tempIdeal").val();
 		
 		console.log(url_final);
 		
@@ -12,7 +29,7 @@ $(document).ready(function(){
 		
 		$.ajax({
 			  type: 'GET'
-			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
+			  ,url: url_final,
 			  
 			  success: function(response){
 			    preventDefault();
