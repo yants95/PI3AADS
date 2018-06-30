@@ -2,7 +2,6 @@ $(document).ready(function(){
 	var url_base = "http://10.0.0.2/01/";
 
 	$("#btEnviar").on("click", function() {
-
 		let parametros = prepararParametros(
 			$.trim($("#tomada1").val()),
 			$.trim($("#tomada2").val()),
@@ -18,9 +17,6 @@ $(document).ready(function(){
 		}
 	});
 
-
-
-
 });
 
 function prepararParametros(tm1, tm2, tm3, tm4, tm5) {
@@ -34,7 +30,6 @@ function prepararParametros(tm1, tm2, tm3, tm4, tm5) {
 function enviarRequisicao(url, paramentros) {
 	// monstar url final para requisição
 	let url_final = url+paramentros;
-	console.log("URL FINAL: "+url_final);
 	$.ajax({
 		url: url_final,
 		type: 'GET',
