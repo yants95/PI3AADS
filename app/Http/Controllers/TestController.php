@@ -19,4 +19,9 @@ class TestController extends Controller
     public function exibirTemperatura() {
       return view('aquario.temperatura');
     }
+
+    public function exibirTomadas()
+    {
+      return view('aquario.tomadas');
+    }
 }

@@ -17,6 +17,7 @@ $this->group(['prefix' => 'frontEnd'], function() {
     $this->get('canalazul', 'TestController@exibirCanalAzul');
     $this->get('canalbranco', 'TestController@exibirCanalBranco');
     $this->get('temperatura', 'TestController@exibirTemperatura');
+    $this->get('tomadas', 'TestController@exibirTomadas');
 });
 
 
