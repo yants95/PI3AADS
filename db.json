@@ -3,8 +3,8 @@
 		{
 			"temperatura": [
 				{
-					"atual": 123,
-					"minima": 123,
+					"atual": 1230,
+					"minima": 123456,
 					"maxima": 123
 				}
 			],
