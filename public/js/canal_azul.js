@@ -18,7 +18,7 @@ $(document).ready(function(){
 		if(params !== 0) {
 			enviarRequisicao(base_url, params);
 		} else {
-			alert("Preenchar todos os campos para primeiro horario.");
+			alert("Preencher todos os campos para primeiro horario.");
 		}
 	});
 	
@@ -74,7 +74,7 @@ $(document).ready(function(){
 		if(params !== 0) {
 			enviarRequisicao(base_url, params);
 		} else {
-			alert("Preenchar todos os campos para ultimos horario.");
+			alert("Preencher todos os campos para ultimos horario.");
 		}		
 	});
 
@@ -152,8 +152,8 @@ Funcão para realizar requisição
 function enviarRequisicao(url, params) {
 	// monstar url final para requisição
 	let url_final = url+params;
-	alert(url_final);
-	/*$.ajax({
+	console.log(url_final);
+	$.ajax({
 		url: url_final,
 		type: 'GET',
 		success: function(data) {
@@ -162,7 +162,7 @@ function enviarRequisicao(url, params) {
 		error: function(error) {
 			console.log(error);
 		}
-	});*/
+	});
 }
 
 /*
