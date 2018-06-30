@@ -39,7 +39,7 @@ $('.modal-footer').on('click', '.edit', function(e) {
           'data_desmontagem': $('#data_desmontagem').val()
       },
       success: function(data) {
-          window.location.href="/aquario";
+    	  
       }
   });
 });
