@@ -2,10 +2,11 @@ $(document).ready(function() {
 	$("#dataArduino").text("23/06/2018");
 	$("#horaArduino").text("15:12");
 	
-	$.getJSON("https://my-json-server.typicode.com/typicode/demo/db", function(dados) {
+	$.getJSON("https://github.com/typicode/json-server/blob/master/db.json", function(dados) {
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-            $("#tempAtual").text(dados.posts[0].id);
+        	console.log(dados);
+            $("#tempAtual").text(dados.aquario.temperatura[0].atual);
             $("#tempMinima").text(dados.posts[1].id);
             $("#tempMaxima").text(dados.posts[2].id);
             
