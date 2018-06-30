@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	var base_url = "http://10.0.0.2/06/";
+	var base_url = "http://10.0.0.2/05/";
 
 	$("#EnviarCincoPrimeiros").on("click", function() {
-		let paramentros = validarParamentro(
+		let params = validarParametro1(
 										$.trim($("#pHorario1").val()),
 										$.trim($("#pPotencia1").val()),
 										$.trim($("#pHorario2").val()),
@@ -15,15 +15,51 @@ $(document).ready(function(){
 										$.trim($("#pPotencia5").val())
 									);
 
-		if(paramentros !== 0) {
-			enviarRequisicao(base_url, paramentros);
+		if(params !== 0) {
+			enviarRequisicao(base_url, params);
 		} else {
-			alert("Preenchar todos os campos para primeiro horario.");
+			alert("Preencher todos os campos para primeiro horario.");
 		}
 	});
+	
+	for (var i = 1; i < 6; i++) {
+		$("#pPotencia"+i).on("keyup", function(){
+			var regexp = /[^0-9:]/g;
+			if(this.value.match(regexp)){
+				$(this).val(this.value.replace(regexp,''));
+			}
+		});
+	}
+	
+	for (var i = 1; i < 6; i++) {
+		$("#pHorario"+i).on("keyup", function(){
+			var regexp = /[^0-9:]/g;
+			if(this.value.match(regexp)){
+				$(this).val(this.value.replace(regexp,''));
+			}
+		});
+	}
+	
+	for (var i = 1; i < 6; i++) {
+		$("#uHorario"+i).on("keyup", function(){
+			var regexp = /[^0-9:]/g;
+			if(this.value.match(regexp)){
+				$(this).val(this.value.replace(regexp,''));
+			}
+		});
+	}
+	
+	for (var i = 1; i < 6; i++) {
+		$("#uPotencia"+i).on("keyup", function(){
+			var regexp = /[^0-9:]/g;
+			if(this.value.match(regexp)){
+				$(this).val(this.value.replace(regexp,''));
+			}
+		});
+	}
 
 	$("#EnviarCincoUltimos").on("click", function() {
-		let paramentros = validarParamentro(
+		let params = validarParametro2(
 										$.trim($("#uHorario1").val()),
 										$.trim($("#uPotencia1").val()),
 										$.trim($("#uHorario2").val()),
@@ -35,12 +71,11 @@ $(document).ready(function(){
 										$.trim($("#uHorario5").val()),
 										$.trim($("#uPotencia5").val())
 									);
-		if(paramentros !== 0) {
-			enviarRequisicao(base_url, paramentros);
+		if(params !== 0) {
+			enviarRequisicao(base_url, params);
 		} else {
 			alert("Preenchar todos os campos para ultimos horario.");
-		}
-
+		}		
 	});
 
 });
@@ -51,9 +86,29 @@ Funcão para validar valores passado nos inputs
 @method validarParamentro(params...)
 @return retorna string de paramentros validados
 */
-function validarParamentro(h1, p2, h3, p4, h5, p6, h7, p8, h9, p10) {
-	if (h1 && p2 && h3 && p4 && h5 && p6 && h7 && p8 && h9 && p10) {
-		let  aux = `${replaceDoisPontos(h1)}${incluirZeros(p2)}${replaceDoisPontos(h3)}${incluirZeros(p4)}${replaceDoisPontos(h5)}${incluirZeros(p6)}${replaceDoisPontos(h7)}${incluirZeros(p8)}${replaceDoisPontos(h9)}${incluirZeros(p10)}`;
+
+//Recebe os cinco primeiros horários e as cinco primeiras potências para validação
+function validarParametro1(h1, p1, h2, p2, h3, p3, h4, p4, h5, p5) {
+	if (h1 && p1 && h2 && p2 && h3 && p3 && h4 && p4 && h5 && p5) {
+		let  aux = `${replaceDoisPontos(h1) + incluirZeros(p1) +
+			replaceDoisPontos(h2) + incluirZeros(p2) +
+			replaceDoisPontos(h3) + incluirZeros(p3) + 
+			replaceDoisPontos(h4) + incluirZeros(p4) +
+			replaceDoisPontos(h5) + incluirZeros(p5) }`;
+		return aux;
+	} else {
+		return 0;
+	}
+}
+
+//Recebe os cinco últimos horários e as cinco últimas potências para validação
+function validarParametro2(h1, p1, h2, p2, h3, p3, h4, p4, h5, p5) {
+	if (h1 && p1 && h2 && p2 && h3 && p3 && h4 && p4 && h5 && p5) {
+		let  aux = `${replaceDoisPontos(h1) + incluirZeros(p1) +
+			replaceDoisPontos(h2) + incluirZeros(p2) +
+			replaceDoisPontos(h3) + incluirZeros(p3) + 
+			replaceDoisPontos(h4) + incluirZeros(p4) +
+			replaceDoisPontos(h5) + incluirZeros(p5) }`;
 		return aux;
 	} else {
 		return 0;
@@ -94,11 +149,11 @@ Funcão para realizar requisição
 
 @method validarParamentro(url, paramentros)
 */
-function enviarRequisicao(url, paramentros) {
+function enviarRequisicao(url, params) {
 	// monstar url final para requisição
-	let url_final = url+paramentros;
-	console.log("URL FINAL: "+url_final);
-	$.ajax({
+	let url_final = url+params;
+	console.log(url_final);
+	/*$.ajax({
 		url: url_final,
 		type: 'GET',
 		success: function(data) {
@@ -107,24 +162,10 @@ function enviarRequisicao(url, paramentros) {
 		error: function(error) {
 			console.log(error);
 		}
-	});
+	});*/
 }
 
 /*
 Funcão para realizar validação dos campos numericos no onInput
 */
-function maxLengthCheck(object) {
-	if (object.value.length > object.max.length)
-		object.value = object.value.slice(0, object.max.length)
-}
 
-function isNumeric (evt) {
-	var theEvent = evt || window.event;
-	var key = theEvent.keyCode || theEvent.which;
-	key = String.fromCharCode (key);
-	var regex = /[0-9]|\./;
-	if ( !regex.test(key) ) {
-		theEvent.returnValue = false;
-		if(theEvent.preventDefault) theEvent.preventDefault();
-	}
-}
