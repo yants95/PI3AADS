@@ -2,24 +2,26 @@ $(document).ready(function() {
 	$("#dataArduino").text("23/06/2018");
 	$("#horaArduino").text("15:12");
 	
-	/*$.getJSON("https://my-json-server.typicode.com/typicode/demo/db", function(dados) {
+	$.getJSON("https://my-json-server.typicode.com/typicode/demo/db", function(dados) {
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
             $("#tempAtual").text(dados.posts[0].id);
             $("#tempMinima").text(dados.posts[1].id);
             $("#tempMaxima").text(dados.posts[2].id);
+            
+            $("#tomada1").text(dados.tomadas[0].t1);
+            $("#tomada2").text(dados.tomadas[1].t2);
+            $("#tomada3").text(dados.tomadas[2].t3);
+            $("#tomada4").text(dados.tomadas[3].t4);
+            $("#tomada5").text(dados.tomadas[4].t5);
+            
+            $("#controle_nivel").text(dados.tomadas[0].nivel);
+            $("#controle_temp").text(dados.tomadas[1].temperatura);
+            $("#controle_iluminacao").text(dados.tomadas[2].iluminacao);
         }
         
-        if(dados.controles[0].nivel == "Desativado") {
-        	$("#nivelControle).removeClass("btn btn-danger");
-        	$("#nivelControle).addClass("btn btn-success");
-        	$("#nivelControle).text("Ativar nível de controle de água");
-        } else if((dados.controles[0].nivel == "Ativado") {
-        	$("#nivelControle).removeClass("btn btn-success");
-        	$("#nivelControle).addClass("btn btn-danger");
-        	$("#nivelControle).text("Desativar nível de controle de água");
-        }
-    });*/
+        
+    });
 	
 	$("#desativarControle").on("click", function() {
 		$.ajax({

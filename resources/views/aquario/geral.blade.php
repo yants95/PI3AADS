@@ -132,7 +132,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Nível</span>
-              <span class="info-box-number" id="tomada1"><small></small></span>
+              <span class="info-box-number" id="controle_nivel"><small></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -145,7 +145,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Temperatura</span>
-              <span class="info-box-number" id="tomada2"><small></small></span>
+              <span class="info-box-number" id="controle_temp"><small></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -158,7 +158,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Iluminação</span>
-              <span class="info-box-number" id="tomada3"><small></small></span>
+              <span class="info-box-number" id="controle_iluminacao"><small></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
