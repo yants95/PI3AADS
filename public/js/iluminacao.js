@@ -3,18 +3,36 @@ $(document).ready(function(){
 	var url = "http://10.0.0.2/04/";
 	var valor = "";
 	
+	$("#canalAzul").on("keyup", function(){
+	  var regexp = /[^0-9]/g;
+	  if(this.value.match(regexp)){
+	    $(this).val(this.value.replace(regexp,''));
+	  }
+	});
+	
+	$("#canalBranco").on("keyup", function(){
+	  var regexp = /[^0-9]/g;
+	  if(this.value.match(regexp)){
+	    $(this).val(this.value.replace(regexp,''));
+	  }
+	});
+	
 	$("#btEnviar").on("click", function() {
 		
-		$("#canalAzul").on("blur", function() {
-			valor = $("#canalAzul").val().replace(/[^a-zA-Z]+/g,'');
-			$("#canalAzul").val(valor);
-		});
-		
-		/*if($("#canalAzul").val() < 0 || $("#canalAzul").val() > 100
-			|| $("#canalBranco").val() < 0 || $("#canalBranco").val() > 100	) {
-			alert("Valor da potência não pode negativo nem maior que zero");
+		if($("#canalAzul").val() == "" || $("#canalBranco").val() == "") {
+			alert("Todos os campos devem ser preenchidos");
 			return false;
-		}*/
+		}
+
+		if($("#canalAzul").val() < 0 || $("#canalAzul").val() > 100) {
+			alert("Potência não pode ser negativa nem maior que 100");
+			return false;
+		}
+		
+		if($("#canalBranco").val() < 0 || $("#canalBranco").val() > 100) {
+			alert("Potência não pode ser negativa nem maior que 100");
+			return false;
+		}
 		
 		
 		

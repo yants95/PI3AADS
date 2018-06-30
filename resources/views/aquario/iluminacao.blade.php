@@ -23,13 +23,13 @@
                 <div class="col-md-12">
                     <div class="col-sm-3">
                     	<label>Potência canal azul</label>
-                    	<input type="text" class="form-control" id="canalAzul" placeholder="Exemplo: 10" required>
+                    	<input type="text" class="form-control" id="canalAzul" placeholder="Exemplo: 10" maxlength="3">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="col-sm-3">
                     	<label>Potência canal branco</label>
-                    	<input type="text" class="form-control" id="canalBranco" placeholder="Exemplo: 30" required>
+                    	<input type="text" class="form-control" id="canalBranco" placeholder="Exemplo: 30" maxlength="3">
                     </div>
                 </div>
             </table>

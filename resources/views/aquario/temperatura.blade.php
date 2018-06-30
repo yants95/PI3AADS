@@ -23,13 +23,20 @@
                 <div class="col-md-12">
                     <div class="col-sm-3">
                     	<label>Temperatura mínima</label>
-                    	<input type="text" class="form-control" id="tempMinima" placeholder="Exemplo: 27.5" required>
+                    	<input type="text" class="form-control" id="tempMinima" placeholder="Exemplo: 27.5">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="col-sm-3">
-                    	<label>Temperatura mínima</label>
-                    	<input type="text" class="form-control" id="tempMaxima" placeholder="Exemplo: 27.5" required>
+                    	<label>Temperatura máxima</label>
+                    	<input type="text" class="form-control" id="tempMaxima" placeholder="Exemplo: 27.5">
+                    </div>
+                </div>
+                
+                  <div class="col-md-12">
+                    <div class="col-sm-3">
+                    	<label>Temperatura ideal</label>
+                    	<input type="text" class="form-control" id="tempIdeal" placeholder="Exemplo: 27.5">
                     </div>
                 </div>
 
