@@ -1,0 +1,35 @@
+{
+	"aquario": [
+		{
+			"temperatura": [
+				{
+					"atual": 123,
+					"minima": 123,
+					"maxima": 123
+				}
+			],
+			"tomadas": [
+				{
+					"t1": "Desligado",
+					"t2": "Desligado",
+					"t3": "Desligado",
+					"t4": "Desligado",
+					"t5": "Desligado"
+				}
+			],
+			"controles": [
+				{
+					"nivel": "Desativado",
+					"temperatura": "Desativado",
+					"iluminacao": "Desativado"
+				}
+			],
+			"dateTime": [
+				{
+					"data": "29/06/2018",
+					"hora": "22:16:03"
+				}
+			]
+		}
+	]
+}
