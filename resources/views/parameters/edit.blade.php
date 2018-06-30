@@ -15,7 +15,7 @@
                     <div class="col-md-12">
                         <div class="col-sm-4">
                             <label for="data">Data</label>
-                            <input type="date" name="data" id="data" class="form-control" >
+                            <input type="datetime" name="data" id="data" class="form-control" >
                         </div>  
 
                         <div class="col-sm-4">
