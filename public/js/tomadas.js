@@ -27,9 +27,10 @@ function prepararParametros(tm1, tm2, tm3, tm4, tm5) {
 	}
 }
 
-function enviarRequisicao(url, paramentros) {
+function enviarRequisicao(url, parametros) {
 	// monstar url final para requisição
-	let url_final = url+paramentros;
+	let url_final = url+parametros;
+	console.log(url_final);
 	$.ajax({
 		url: url_final,
 		type: 'GET',
