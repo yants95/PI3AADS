@@ -2,10 +2,8 @@ $(document).ready(function() {
 	
 	
 	$.getJSON("http://my-json-server.typicode.com/yants95/PI3AADS/aquario", function(dados) {
-		headers: { "Access-Control-Allow-Origin","*"}
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-        	console.log(dados);
         	$("#dataArduino").text(dados[0].dateTime[0].data);
         	$("#horaArduino").text(dados[0].dateTime[0].hora);
             $("#tempAtual").text(dados[0].temperatura[0].atual);
