@@ -44,6 +44,12 @@
     
     <div class="box">
     	<div class="box-body">
+			<button class="btn btn-danger" id="btDesativarIluminacao">Desativar iluminação</button>
+    	</div>
+    </div>
+    
+    <div class="box">
+    	<div class="box-body">
     		<p style="color: darkblue; font-weight: bold; font-size: 20px;">Simulação</p><br>
     		<p style="font-weight: bold; font-size: 15px;">
     			Descrição: Irá executar uma simulação do dia da luminária, conforme potência informada pelo usuário nas integrações de 05 a 09.
