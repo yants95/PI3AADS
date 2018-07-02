@@ -54,31 +54,31 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="ano
 
       <div class="col-md-12">
         <div class="col-sm-2 offset-2">
-          <label>1º horário e potência</label><br>
+          <label>6º horário e potência</label><br>
           <input type="text" class="form-control" maxlength="5" id="uHorario1" placeholder="08:30 => 0830"><br>
           <input type="text" maxlength="3" class="form-control" id="uPotencia1" placeholder="70% => 070">
         </div>
 
         <div class="col-sm-2">
-          <label>2º horário e potência</label><br>
+          <label>7º horário e potência</label><br>
           <input type="text" class="form-control" maxlength="5" id="uHorario2" placeholder="08:30 => 0830"><br>
           <input type="text" maxlength="3" class="form-control" id="uPotencia2" placeholder="70% => 070">
         </div>
 
         <div class="col-sm-2">
-          <label>3º horário e potência</label><br>
+          <label>8º horário e potência</label><br>
           <input type="text" class="form-control" maxlength="5" id="uHorario3" placeholder="08:30 => 0830"><br>
           <input type="text" maxlength="3" class="form-control" id="uPotencia3" placeholder="70% => 070">
         </div>
 
         <div class="col-sm-2">
-          <label>4º horário e potência</label><br>
+          <label>8º horário e potência</label><br>
           <input type="text" class="form-control" maxlength="5" id="uHorario4" placeholder="08:30 => 0830"><br>
           <input type="text" maxlength="3" class="form-control" id="uPotencia4" placeholder="70% => 070">
         </div>
 
         <div class="col-sm-2">
-          <label>5º horário e potência</label><br>
+          <label>10º horário e potência</label><br>
           <input type="text" class="form-control"  maxlength="5"id="uHorario5" placeholder="08:30 => 0830"><br>
           <input type="text" maxlength="3" class="form-control" id="uPotencia5" placeholder="70% => 070">
         </div>
