@@ -1,8 +1,27 @@
 $(document).ready(function(){
 	
+	$("#tempMinima").on("keyup", function(){
+		var regexp = /[^0-9]/g;
+		if(this.value.match(regexp)){
+			$(this).val(this.value.replace(regexp,''));
+		}
+	});
+	
+	$("#tempMaxima").on("keyup", function(){
+		var regexp = /[^0-9]/g;
+		if(this.value.match(regexp)){
+			$(this).val(this.value.replace(regexp,''));
+		}
+	});
+	
+	$("#tempIdeal").on("keyup", function(){
+		var regexp = /[^0-9]/g;
+		if(this.value.match(regexp)){
+			$(this).val(this.value.replace(regexp,''));
+		}
+	});
+	
 	var url = "http://10.0.0.2/02/";
-	
-	
 	
 	$("#btEnviar").on("click", function() {
 		
