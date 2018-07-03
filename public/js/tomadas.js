@@ -1,5 +1,16 @@
 $(document).ready(function(){
 	var url_base = "http://10.0.0.2/01/";
+	
+	$.getJSON("http://10.0.0.2/00", function(dados) {
+        if (!("erro" in dados)) {
+            //Atualiza os campos com os valores da consulta.
+        	$("#tomada1").val(dados.algumacoisa);
+		$("#tomada2").val(dados.algumacoisa);
+		$("#tomada3").val(dados.algumacoisa);
+		$("#tomada4").val(dados.algumacoisa);
+		$("#tomada5").val(dados.algumacoisa);
+	    }
+        });
 
 	$("#btEnviar").on("click", function() {
 		let parametros = prepararParametros(
