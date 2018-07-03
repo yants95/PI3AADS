@@ -12,11 +12,7 @@
 
 @section('content')
     <div class="box">
-        <div class="box-header">
-            
-        </div>
         <div class="box-body">
-        
             <table class="table table-hover">
                 <div class="col-md-12">
                     <div class="col-sm-2">
@@ -59,12 +55,13 @@
                         	<option value="0">Desligar</option>
                         </select>
                     </div>
-                    <div class="box-footer">
-                    	<button class="btn btn-success" id="btEnviar">Enviar</button>
                     </div>
-                </div>
+		    <div class="col-md-12">
+                      <div class="col-sm-2">
+                      	 <br><button class="btn btn-success" id="btEnviar">Enviar</button>
+                      </div>
+		    </div>
             </table>
-        </div>
     </div>
     @include('tomadas.create')
 @stop
