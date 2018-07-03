@@ -1,5 +1,14 @@
 $(document).ready(function(){
 	
+	$.getJSON("http://10.0.0.2/00", function(dados) {
+        if (!("erro" in dados)) {
+            //Atualiza os campos com os valores da consulta.
+            $("#tempIdeal").val(dados.aquario[0].temperatura[0].ideal);
+	    $("#tempMinima").val(dados.aquario[0].temperatura[0].minima);
+            $("#tempMaxima").val(dados.aquario[0].temperatura[0].maxima);
+	}
+	
+	
 	$("#tempMinima").on("keyup", function(){
 		var regexp = /[^0-9]/g;
 		if(this.value.match(regexp)){
