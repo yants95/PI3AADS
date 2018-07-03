@@ -1,5 +1,31 @@
 $(document).ready(function(){
 	var base_url = "http://10.0.0.2/05/";
+	
+	$.getJSON("http://10.0.0.2/00", function(dados) {
+		if (!("erro" in dados)) {
+			$("#pHorario1").val(dados.aquario[0].horaBranco[0].h0);
+		    $("#pPotencia1").val(dados.aquario[0].potenciaBranco[0].p0);
+		    $("#pHorario2").val(dados.aquario[0].horaBranco[0].h1);
+		    $("#pPotencia2").val(dados.aquario[0].potenciaBranco[0].p1);
+		    $("#pHorario3").val(dados.aquario[0].horaBranco[0].h2);
+		    $("#pPotencia3").val(dados.aquario[0].potenciaBranco[0].p2);
+		    $("#pHorario4").val(dados.aquario[0].horaBranco[0].h3);
+		    $("#pPotencia4").val(dados.aquario[0].potenciaBranco[0].p3);
+		    $("#pHorario5").val(dados.aquario[0].horaBranco[0].h4);
+		    $("#pPotencia5").val(dados.aquario[0].potenciaBranco[0].p4);
+		    
+		    $("#uHorario1").val(dados.aquario[0].horaBranco[0].h5);
+		    $("#uPotencia1").val(dados.aquario[0].potenciaBranco[0].p5);
+		    $("#uHorario2").val(dados.aquario[0].horaBranco[0].h6);
+		    $("#uPotencia2").val(dados.aquario[0].potenciaBranco[0].p6);
+		    $("#uHorario3").val(dados.aquario[0].horaBranco[0].h7);
+		    $("#uPotencia3").val(dados.aquario[0].potenciaBranco[0].p7);
+		    $("#uHorario4").val(dados.aquario[0].horaBranco[0].h8);
+		    $("#uPotencia4").val(dados.aquario[0].potenciaBranco[0].p8);
+		    $("#uHorario5").val(dados.aquario[0].horaBranco[0].h9);
+		    $("#uPotencia5").val(dados.aquario[0].potenciaBranco[0].p9);
+		}
+	});
 
 	$("#EnviarCincoPrimeiros").on("click", function() {
 		let params = validarParametro1(
