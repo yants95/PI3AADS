@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	
 	
-	$.getJSON("http://my-json-server.typicode.com/yants95/PI3AADS/aquario", function(dados) {
+	$.getJSON("http://10.0.0.2/00", function(dados) {
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-        	$("#dataArduino").text(dados[0].dateTime[0].data);
-        	$("#horaArduino").text(dados[0].dateTime[0].hora);
+        	$("#dataArduino").text(dados.aquario.dateTime[0].data);
+        	/*$("#horaArduino").text(dados.aquario.dateTime[0].hora);
             $("#tempAtual").text(dados[0].temperatura[0].atual);
             $("#tempMinima").text(dados[0].temperatura[0].minima);
             $("#tempMaxima").text(dados[0].temperatura[0].maxima);
@@ -18,7 +18,7 @@ $(document).ready(function() {
             
             $("#controle_nivel").text(dados[0].controles[0].nivel);
             $("#controle_temp").text(dados[0].controles[0].temperatura);
-            $("#controle_iluminacao").text(dados[0].controles[0].iluminacao);
+            $("#controle_iluminacao").text(dados[0].controles[0].iluminacao);*/
         }
         
         
