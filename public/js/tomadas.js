@@ -5,12 +5,12 @@ $(document).ready(function(){
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
         	$("#tomada1").val(dados.aquario[0].tomadas[0].t1);
-		$("#tomada2").val(dados.aquario[0].tomadas[0].t2);
-		$("#tomada3").val(dados.aquario[0].tomadas[0].t3);
-		$("#tomada4").val(dados.aquario[0].tomadas[0].t4);
-		$("#tomada5").val(dados.aquario[0].tomadas[0].t5);
+			$("#tomada2").val(dados.aquario[0].tomadas[0].t2);
+			$("#tomada3").val(dados.aquario[0].tomadas[0].t3);
+			$("#tomada4").val(dados.aquario[0].tomadas[0].t4);
+			$("#tomada5").val(dados.aquario[0].tomadas[0].t5);
 	    }
-        });
+    });
 
 	$("#btEnviar").on("click", function() {
 		let parametros = prepararParametros(
