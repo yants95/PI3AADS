@@ -3,6 +3,14 @@ $(document).ready(function(){
 	var url = "http://10.0.0.2/04/";
 	var valor = "";
 	
+	$.getJSON("http://10.0.0.2/00", function(dados) {
+		if (!("erro" in dados)) {
+		    //Atualiza os campos com os valores da consulta.
+		    $("#canalAzul").val(dados.aquario[0].potenciaAtual[0].azul);
+		    $("#canalBranco").val(dados.aquario[0].canalBranco[0].branco);
+		}
+	});
+	
 	$("#canalAzul").on("keyup", function(){
 	  var regexp = /[^0-9]/g;
 	  if(this.value.match(regexp)){
@@ -43,17 +51,15 @@ $(document).ready(function(){
 		url = "http://10.0.0.2/04/";
 		
 		$.ajax({
-			  type: 'GET'
-			  ,url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
-			  
-			  success: function(response){
-			    preventDefault();
-			  },
-			  error: function(error, er){
-			    console.log(error);
-			  }
+			type: 'GET',
+			url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
+			success: function(data) {
+				console.log(data);
+			},
+			error: function(error) {
+				console.log(error);
+			}
 		});
-		
 	});
 	
 	$("#btDesativarIluminacao").on("click", function() {
