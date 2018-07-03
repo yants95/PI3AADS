@@ -7,10 +7,11 @@ $(document).ready(function() {
             $("#dataArduino").text(dados.aquario[0].dateTime[0].data);
 	    $("#horaArduino").text(dados.aquario[0].dateTime[0].hora);
             $("#tempAtual").text(dados.aquario[0].temperatura[0].atual);
-            //$("#tempIdeal").text(dados.aquario[0].temperatura[0].ideal);
+            //falta criar $("#tempIdeal").text(dados.aquario[0].temperatura[0].ideal);
 	    $("#tempMinima").text(dados.aquario[0].temperatura[0].minima);
             $("#tempMaxima").text(dados.aquario[0].temperatura[0].maxima);
-            
+            //falta criar $("#potAzul").text(dados.aquario[0].potenciaAtual[0].azul);	
+            //falta criar $("#potBranco").text(dados.aquario[0].potenciaAtual[0].branco);	
             $("#tomada1").text(dados.aquario[0].tomadas[0].t1);
             $("#tomada2").text(dados.aquario[0].tomadas[0].t2);
             $("#tomada3").text(dados.aquario[0].tomadas[0].t3);
@@ -18,6 +19,7 @@ $(document).ready(function() {
             $("#tomada5").text(dados.aquario[0].tomadas[0].t5);
             
             $("#controle_nivel").text(dados.aquario[0].controles[0].nivel);
+            //falta criar $("#controle_repos").text(dados.aquario[0].controles[0].qtdReposicoes);	
             $("#controle_temp").text(dados.aquario[0].controles[0].temperatura);
             $("#controle_iluminacao").text(dados.aquario[0].controles[0].iluminacao);
         }
