@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$.getJSON("http://10.0.0.2/00", function(dados) {
         if (!("erro" in dados)) {
             //Atualiza os campos com os valores da consulta.
-        	    $("#dataArduino").text(dados.aquario[0].dateTime[0].data);
+            $("#dataArduino").text(dados.aquario[0].dateTime[0].data);
 	    $("#horaArduino").text(dados.aquario[0].dateTime[0].hora);
             $("#tempAtual").text(dados.aquario[0].temperatura[0].atual);
             //$("#tempIdeal").text(dados.aquario[0].temperatura[0].ideal);
