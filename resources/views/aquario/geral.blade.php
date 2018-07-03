@@ -198,6 +198,8 @@
       <div class="box-footer">
       	<button class="btn btn-danger" id="desativarControle">Desativar controle de nível de água</button><br><br>
       	<button class="btn btn-success" id="ativarControle">Ativar controle de nível de água</button>
+        <button class="btn btn-success" id="ativarIluminacaoAutomatica>Ativar iluminação automática</button>
+        <button class="btn btn-success" id="ativarIluminacaoManual">Ativar iluminacão manual</button>
       </div>
       
 
