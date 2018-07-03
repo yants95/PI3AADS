@@ -52,4 +52,30 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	$("#ativarIluminacaoAutomatica").on("click", function() {
+		$.ajax({
+			url: "http://10.0.0.2/04/200&200",
+			type: 'GET',
+			success: function(data) {
+				console.log(data);
+			},
+			error: function(data) {
+				console.log(data);
+			}
+		});
+	});
+
+	$("#ativarIluminacaoManual").on("click", function() {
+		$.ajax({
+			url: "http://10.0.0.2/04/300&300",
+			type: 'GET',
+			success: function(data) {
+				console.log(data);
+			},
+			error: function(data) {
+				console.log(data);
+			}
+		});
+	});
 });
