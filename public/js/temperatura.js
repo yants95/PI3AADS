@@ -11,21 +11,21 @@ $(document).ready(function(){
 	
 	
 	$("#tempMinima").on("keyup", function(){
-		var regexp = /[^0-9]/g;
+		var regexp = /[^0-9.]/g;
 		if(this.value.match(regexp)){
 			$(this).val(this.value.replace(regexp,''));
 		}
 	});
 	
 	$("#tempMaxima").on("keyup", function(){
-		var regexp = /[^0-9]/g;
+		var regexp = /[^0-9.]/g;
 		if(this.value.match(regexp)){
 			$(this).val(this.value.replace(regexp,''));
 		}
 	});
 	
 	$("#tempIdeal").on("keyup", function(){
-		var regexp = /[^0-9]/g;
+		var regexp = /[^0-9.]/g;
 		if(this.value.match(regexp)){
 			$(this).val(this.value.replace(regexp,''));
 		}
@@ -57,16 +57,18 @@ $(document).ready(function(){
 		url = "http://10.0.0.2/02/";
 		
 		$.ajax({
-			  type: 'GET'
-			  ,url: url_final,
-			  
-			  success: function(response){
-			    preventDefault();
-			  },
-			  error: function(error){
-			    console.log(error);
-			  }
+			type: 'GET',
+			url: url_final,
+			success: function(data) {
+				console.log(data);
+			},
+			error: function(data) {
+				console.log(data);
+			}
 		});
+		
+		
+	});
 		
 	});
 	
