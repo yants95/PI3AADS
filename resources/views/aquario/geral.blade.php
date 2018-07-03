@@ -123,32 +123,33 @@
         </div>
         
 <p style="font-weight: bold; font-size: 20px;">POTÊNCIA ATUAL ILUMINAÇÃO</p>
-    <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-blue"><i class="fa fa-plug"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Canal Azul</span>
-              <span class="info-box-number" id="potAzul"><small></small></span>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-blue"><i class="fa fa-plug"></i></span>
+    
+                <div class="info-box-content">
+                  <span class="info-box-text">Canal Azul</span>
+                  <span class="info-box-number" id="potAzul"><small></small></span>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
             </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-white"><i class="fa fa-plug"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Canal Branco</span>
-              <span class="info-box-number" id="potBranco"><small></small></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
+            <!-- /.col -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="info-box">
+                <span class="info-box-icon bg-white"><i class="fa fa-plug"></i></span>
+    
+                <div class="info-box-content">
+                  <span class="info-box-text">Canal Branco</span>
+                  <span class="info-box-number" id="potBranco"><small></small></span>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+		   </div>
+	</div>
         
         
 
