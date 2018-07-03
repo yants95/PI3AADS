@@ -24,15 +24,15 @@
                     	<label>Potência canal branco</label>
                     	<input type="text" class="form-control" id="canalBranco" placeholder="Exemplo: 30" maxlength="3">
                     </div>
+                   </div>
 		    <div class="col-sm-4">
                     	<br><br>
                     	<label>Obs.: A potência de cada canal vai de 0 a 100.</label>
                     </div>
-                </div>
             </table>
             <div class="col-md-12">
 		<div class="col-sm-3">
-            		<br><button class="btn btn-success" id="btEnviar">Enviar</button>
+            <br><button class="btn btn-success" id="btEnviar">Enviar</button>
 		</div>
             </div>
         </div>
