@@ -14,40 +14,31 @@
 
 @section('content')
     <div class="box">
-        <div class="box-header">
-
-        </div>
         <div class="box-body">
-
             <table class="table table-hover">
                 <div class="col-md-12">
                     <div class="col-sm-3">
                     	<label>Temperatura mínima</label>
-                    	<input type="text" class="form-control" id="tempMinima" placeholder="Exemplo: 27.5">
+                    	<input type="text" class="form-control" id="tempMinima" placeholder="Exemplo: 26">
                     </div>
-                </div>
-                <div class="col-md-12">
+
                     <div class="col-sm-3">
                     	<label>Temperatura máxima</label>
-                    	<input type="text" class="form-control" id="tempMaxima" placeholder="Exemplo: 27.5">
+                    	<input type="text" class="form-control" id="tempMaxima" placeholder="Exemplo: 27">
                     </div>
-                </div>
-                
-                  <div class="col-md-12">
+
                     <div class="col-sm-3">
                     	<label>Temperatura ideal</label>
-                    	<input type="text" class="form-control" id="tempIdeal" placeholder="Exemplo: 27.5">
+                    	<input type="text" class="form-control" id="tempIdeal" placeholder="Exemplo: 26.5">
                     </div>
-                </div>
-
-                <div class="col-md-12">
-                <div class="box-footer">
-                  <button class="btn btn-success" id="btEnviar">Enviar</button>
-                </div>
-                </div>
+     		</div>
+		<div class="col-md-12">
+	            <div class="col-sm-3">
+    	                <br><button class="btn btn-success" id="btEnviar">Enviar</button>
+               	    </div>
+               </div>
+               </div>
             </table>
-
-        </div>
     </div>
 
 @stop
