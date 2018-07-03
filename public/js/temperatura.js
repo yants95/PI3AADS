@@ -53,7 +53,7 @@ $(document).ready(function(){
 			  success: function(response){
 			    preventDefault();
 			  },
-			  error: function(error, er){
+			  error: function(error){
 			    console.log(error);
 			  }
 		});
