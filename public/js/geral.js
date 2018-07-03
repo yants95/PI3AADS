@@ -17,11 +17,15 @@ $(document).ready(function() {
 	    $("#potAzul").text(dados.aquario[0].potenciaAtual[0].azul);	
             $("#potBranco").text(dados.aquario[0].potenciaAtual[0].branco);	
             
-	    $("#tomada1").text(dados.aquario[0].tomadas[0].t1);
-            $("#tomada2").text(dados.aquario[0].tomadas[0].t2);
-            $("#tomada3").text(dados.aquario[0].tomadas[0].t3);
-            $("#tomada4").text(dados.aquario[0].tomadas[0].t4);
-            $("#tomada5").text(dados.aquario[0].tomadas[0].t5);
+            
+        for (var i = 1; i < 6; i++) {
+        	if(dados.aquario[0].tomadas[0].t[i] == 1) {
+            	$("#tomada"+i).text("Ligado");
+            } else {
+            	$("#tomada"+i).text("Desligado");
+            }
+        }
+            
             
             $("#controle_nivel").text(dados.aquario[0].controles[0].nivel);
             $("#controle_repos").text(dados.aquario[0].controles[0].qtdReposicoes);	
