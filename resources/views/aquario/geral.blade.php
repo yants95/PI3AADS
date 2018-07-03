@@ -94,12 +94,13 @@
 	    <div class="box-footer">
               <button class="btn btn-success" id="ativarIluminacaoAutomatica">Ativar iluminação automática</button>
               <button class="btn btn-success" id="ativarIluminacaoManual">Ativar iluminacão manual</button>
+	      <button class="btn btn-success" id="simularIluminacao">Simular iluminação automática</button>
             </div><br>
 	<div class="col-md-4 col-sm-6 col-xs-12">
 	  <div class="info-box">
 	    <span class="info-box-icon bg-green"><i class="fa fa-desktop"></i></span>
 	    <div class="info-box-content">
-	      <span class="info-box-text">Iluminação</span>
+	      <span class="info-box-text"> Modo da Iluminação</span>
 	      <span class="info-box-number" id="controle_iluminacao"><small></small></span>
 	    </div>
 	  </div>

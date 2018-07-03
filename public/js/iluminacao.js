@@ -69,17 +69,4 @@ $(document).ready(function(){
 		});
 	});
 	
-	$("#btSimulacao").on("click", function() {
-		$.ajax({
-			url: "http://10.0.0.2/09",
-			type: 'GET',
-			success: function(data) {
-				console.log(data);
-			},
-			error: function(data) {
-				console.log(data);
-			}
-		});
-	});
-	
 });
