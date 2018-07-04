@@ -26,7 +26,9 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    
+    public function api() {
+        return view('aquario.geral');
+    }
     
     public function index()
     {
