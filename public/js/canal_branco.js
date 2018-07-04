@@ -158,7 +158,7 @@ Funcão para validar se o valor é igual 0
 function incluirZeros(number) {
 	let numberString = String(number);
 	//var response = numberString.split("");
-	if(number > 0 && number <= 100) {
+	if(number >= 0 && number <= 100) {
 		if (number == 100) {
 			return number;
 		} else if (numberString.length == 2) {
