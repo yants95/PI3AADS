@@ -16,7 +16,11 @@ $(document).ready(function() {
             
 	    $("#potAzul").text(dados.aquario[0].potenciaAtual[0].azul);	
             $("#potBranco").text(dados.aquario[0].potenciaAtual[0].branco);	
-            
+
+            $("#controle_nivel").text(dados.aquario[0].controles[0].nivel);
+            $("#controle_repos").text(dados.aquario[0].controles[0].qtdReposicoes);	
+            $("#controle_temp").text(dados.aquario[0].controles[0].temperatura);
+            $("#controle_iluminacao").text(dados.aquario[0].controles[0].iluminacao);            
             
         for (var i = 1; i < 6; i++) {
         	if(dados.aquario[0].tomadas[0].t[i] == 1) {
@@ -26,11 +30,6 @@ $(document).ready(function() {
             }
         }
             
-            
-            $("#controle_nivel").text(dados.aquario[0].controles[0].nivel);
-            $("#controle_repos").text(dados.aquario[0].controles[0].qtdReposicoes);	
-            $("#controle_temp").text(dados.aquario[0].controles[0].temperatura);
-            $("#controle_iluminacao").text(dados.aquario[0].controles[0].iluminacao);
         }
         
         
