@@ -15,8 +15,8 @@
 <p style="font-weight: bold; font-size: 20px;">TEMPERATURA</p>
     <div class="row">	
        <div class="box-footer">
-    	  <button class="btn btn-success" id="ativarControleTemp">Ativar controle de iluminação</button>
-    	  <button class="btn btn-danger" id="desativarControleTemp">Desativar controle de iluminação</button>
+    	  <button class="btn btn-success" id="ativarControleTemp">Ativar controle de temperatura</button>
+    	  <button class="btn btn-danger" id="desativarControleTemp">Desativar controle de temperatura</button>
        </div><br>
 
 	<div class="col-md-4 col-sm-6 col-xs-12">
