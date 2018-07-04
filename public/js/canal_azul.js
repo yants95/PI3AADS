@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	var base_url = "http://10.0.0.2/05/";
+	var base_url1 = "http://10.0.0.2/05/";
+	var base_url2 = "http://10.0.0.2/06/";
 	
 	$.getJSON("http://10.0.0.2/00", function(dados) {
 		if (!("erro" in dados)) {
@@ -43,7 +44,7 @@ $(document).ready(function(){
 									);
 
 		if(params !== 0) {
-			enviarRequisicao(base_url, params);
+			enviarRequisicao1(base_url1, params);
 		} else {
 			alert("Preencher todos os campos para primeiro horario.");
 		}
@@ -99,7 +100,7 @@ $(document).ready(function(){
 										$.trim($("#uPotencia5").val())
 									);
 		if(params !== 0) {
-			enviarRequisicao(base_url, params);
+			enviarRequisicao2(base_url2, params);
 		} else {
 			alert("Preencher todos os campos para ultimos horario.");
 		}		
@@ -176,7 +177,23 @@ Funcão para realizar requisição
 
 @method validarParamentro(url, paramentros)
 */
-function enviarRequisicao(url, params) {
+function enviarRequisicao1(url, params) {
+	// monstar url final para requisição
+	let url_final = url+params;
+	console.log(url_final);
+	$.ajax({
+		url: url_final,
+		type: 'GET',
+		success: function(data) {
+			console.log(data);
+		},
+		error: function(error) {
+			console.log(error);
+		}
+	});
+}
+
+function enviarRequisicao2(url, params) {
 	// monstar url final para requisição
 	let url_final = url+params;
 	console.log(url_final);
