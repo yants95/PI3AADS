@@ -26,11 +26,7 @@ class AquarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function api() {
-        $api = $this->arduino->all();
-        
-        return view('aquario.geral', compact('api'));
-    }
+    
     
     public function index()
     {
