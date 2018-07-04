@@ -6,6 +6,8 @@
     
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/geral.js') }}"></script>
+    
+    <meta http-equiv="refresh" content="5">
 @stop
 
 @section('content')
