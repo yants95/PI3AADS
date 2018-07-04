@@ -48,11 +48,10 @@ $(document).ready(function(){
 		
 		console.log(url_final);
 		
-		url = "http://10.0.0.2/04/";
 		
 		$.ajax({
 			type: 'GET',
-			url: url_final = url + $("#tempMinima").val() + "&" + $("#tempMaxima").val(),
+			url: url_final,
 			success: function(data) {
 				console.log(data);
 			},
