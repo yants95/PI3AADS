@@ -22,17 +22,13 @@ $(document).ready(function() {
             $("#controle_temp").text(dados.aquario[0].controles[0].temperatura);
             $("#controle_iluminacao").text(dados.aquario[0].controles[0].iluminacao);            
             
-        for (var i = 1; i < 6; i++) {
-        	if(dados.aquario[0].tomadas[0].t[i] == 1) {
-            	$("#tomada"+i).text("Ligado");
-            } else {
-            	$("#tomada"+i).text("Desligado");
-            }
-        }
+      	    $("#tomada1").text(dados.aquario[0].tomadas[0].t1 == 1 ? "Ligado" : "Desligado");
+      	    $("#tomada2").text(dados.aquario[0].tomadas[0].t2 == 1 ? "Ligado" : "Desligado");
+      	    $("#tomada3").text(dados.aquario[0].tomadas[0].t3 == 1 ? "Ligado" : "Desligado");
+      	    $("#tomada4").text(dados.aquario[0].tomadas[0].t4 == 1 ? "Ligado" : "Desligado");
+      	    $("#tomada5").text(dados.aquario[0].tomadas[0].t5 == 1 ? "Ligado" : "Desligado");
             
         }
-        
-        
     });
 	
 	$("#desativarControle").on("click", function() {
