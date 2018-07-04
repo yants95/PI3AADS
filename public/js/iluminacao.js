@@ -6,8 +6,8 @@ $(document).ready(function(){
 	$.getJSON("http://10.0.0.2/00", function(dados) {
 		if (!("erro" in dados)) {
 		    //Atualiza os campos com os valores da consulta.
-		    $("#canalAzul").val(dados.aquario[0].potenciaAtual[0].azul);
-		    $("#canalBranco").val(dados.aquario[0].potenciaAtual[0].branco);
+		    $("#canalAzul").val(dados.aquario[0].potenciaManual[0].azul);
+		    $("#canalBranco").val(dados.aquario[0].potenciaManual[0].branco);
 		}
 	});
 	
