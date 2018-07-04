@@ -7,7 +7,7 @@ $(document).ready(function(){
 		if (!("erro" in dados)) {
 		    //Atualiza os campos com os valores da consulta.
 		    $("#canalAzul").val(dados.aquario[0].potenciaAtual[0].azul);
-		    $("#canalBranco").val(dados.aquario[0].canalBranco[0].branco);
+		    $("#canalBranco").val(dados.aquario[0].potenciaAtual[0].branco);
 		}
 	});
 	
