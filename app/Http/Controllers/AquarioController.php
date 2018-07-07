@@ -65,9 +65,8 @@ class AquarioController extends Controller
     }
 
     public function tomadas() {
-        $api = $this->arduino->all();
         
-        return view('aquario.tomadas', compact('api'));
+        return view('aquario.tomadas');
     }
 
     public function arduino() {

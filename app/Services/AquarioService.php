@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class AquarioService {
     
-    public function all() {
+    /*public function all() {
         $client = new Client([
             'base_uri' => 'https://my-json-server.typicode.com/typicode/demo/db',
         ]);
@@ -14,5 +14,5 @@ class AquarioService {
         $response = $client->request('GET');
 
         return json_decode($response->getBody()->getContents());
-    } 
+    }*/
 }
